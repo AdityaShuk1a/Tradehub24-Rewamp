@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomButton from './CustomButton';
 
 const Navbar = () => {
   return (
@@ -14,8 +15,9 @@ const Navbar = () => {
         <div>Contact</div>
       </div>
       <div className='text-xl flex gap-[2.5vh]'>
-        <button>Login</button>
-        <button>Start Free Trial</button>
+        <CustomButton buttonName={"Login"} />
+        <CustomButton buttonName={"Start Free Trial"} />
+        
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import broImg from '../assets/bro.png';
+import CustomButton from '../components/CustomButton.jsx'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -42,7 +43,10 @@ const Home = () => {
                     <div className='' style={{ marginTop: "2.88vh", padding: "1.44vh", fontSize: "1.92vh" ,  marginLeft : "3vh"}}>
                       <h1>The idea framework to learn how to</h1>
                       <h1>manage all aspects of startup</h1>
-                      <button className='bg-[#ff6e6e] rounded-full' style={{ marginTop: "1.92vh", padding: "0.96vh", fontSize: "1.92vh", width: "19.23vh" }}>start for free</button>
+                      <div className='rounded-2xl overflow-hidden bg-black w-fit ' >
+
+                      <CustomButton buttonName={"Start For Free"} />
+                      </div>
                     </div>
                   </div>
                   <div className="container-8 h-[50vh] bg-[#268] w-1/2 flex justify-center items-center">
