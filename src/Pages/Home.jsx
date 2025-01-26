@@ -1,11 +1,24 @@
-import React from 'react';
+// Home.jsx
+import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import broImg from '../assets/bro.png';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules';
+
+import TradesCarousel from '../components/TradesCarousel.jsx';
+import ReviewsCarousel from '../components/ReviewCarousel.jsx';
+import HowItWorks from '../components/HowItWorks.jsx';
+import HireSafely from '../components/HireSafely.jsx';
 
 const Home = () => {
+
   return (
     <>
-    
       <div className='container-1 h-full bg-purple-800 flex flex-col z-10 rounded-b-[7vh] rounded-bl-[7vh]'>
         <div className='container-2 h-full bg-blue-800 flex flex-col rounded-b-[7vh] rounded-bl-[7vh]'>
           <div className='container-3 h-full bg-green-800 flex flex-col rounded-b-[7vh] rounded-bl-[7vh]'>
@@ -28,13 +41,19 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="container-8 h-[50vh] bg-amber-50 w-1/2 flex justify-center items-center">
-                    <img src="https://tradehub24.com/profile_images/headr-image1bg.png" alt="" style={{ width: "38.46vh" }} />
+                    <img src={broImg} alt="" style={{ width: "38.46vh" }} />
                   </div>
                 </div>
                 <div className=' h-[23vh]  bg-amber-100 ' style={{ margin : "8vh" }}>
                   <div className='flex flex-wrap w-full h-[26.92vh] bg-red-500 rounded-[7vh] items-center justify-evenly'>
+                    <HowItWorks/>
                   </div>
                 </div>
+              </div>
+
+              <div className="my-8 ">
+          
+                <TradesCarousel />
               </div>
 
               <div className="container-6 h-[100vh] w-screen flex rounded-b-[7vh] rounded-bl-[7vh] overflow-hidden">
@@ -45,8 +64,12 @@ const Home = () => {
               </div>
             </div>
             <div className="container-9 h-[100vh] rounded-b-[7vh] rounded-bl-[7vh]">
+              < HireSafely />
             </div>
-          </div>
+          </div>        
+
+          <ReviewsCarousel />
+          
           <div className="container-10 h-[100vh] w-1/2">
           </div>
         </div>
@@ -54,8 +77,8 @@ const Home = () => {
         </div>
       </div>
       <div className="container-9 h-[100vh] rounded-b-[7vh] rounded-bl-[7vh]">
-            </div>
-      <div className="container-9 h-[100vh] rounded-b-[7vh] rounded-bl-[7vh] z-[-1] fixed  bottom-0 ">
+      </div>
+      <div className="container-9 h-[100vh] rounded-b-[7vh] rounded-bl-[7vh] z-[-1] fixed bottom-0 ">
         <Footer />
       </div>
     </>
