@@ -4,9 +4,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
+import CustomButton from './CustomButton';
+import Card from './Card';
 
 const TradesCarousel = () => {
-
   const tradesData = [
     {
       id: 1,
@@ -66,8 +67,7 @@ const TradesCarousel = () => {
 
   return (
     <>
-    {/* <div className=" "> */}
-      <h2 className="text-center text-[4vh] font-bold my-[5vh]" style={{marginTop : "10vh" , marginBottom : "7vh"}} >Our Popular Trades</h2>
+      <h2 className="text-center text-[4vh] font-bold my-[5vh]" style={{ marginTop: "10vh", marginBottom: "7vh" }}>Our Popular Trades</h2>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={30}
@@ -83,22 +83,10 @@ const TradesCarousel = () => {
       >
         {tradesData.map((trade) => (
           <SwiperSlide key={trade.id}>
-            <div className="card bg-white p-[3vh] shadow-lg rounded-lg text-center">
-              <img
-                src={trade.image}
-                alt={trade.heading}
-                className="w-full h-[20vw] object-cover rounded-lg mb-[2vh]"
-              />
-              <h2 className="text-[3.5vh] font-bold mb-[1vh]">{trade.heading}</h2>
-              <p className="text-[2.5vh] text-gray-600 mb-[2vh]">{trade.description}</p>
-              <button className="bg-blue-500 text-white px-[4vw] py-[1vh] rounded-full hover:bg-blue-600">
-                View {trade.heading}
-              </button>
-            </div>
+            <Card tradeId={trade.id} tradeHeading={trade.heading} tradeImage={trade.image} tradeDescription={trade.description} />
           </SwiperSlide>
         ))}
       </Swiper>
-    {/* </div> */}
     </>
   );
 };
