@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import broImg from '../assets/bro.png';
 import CustomButton from '../components/CustomButton.jsx'
-
+import { gsap } from 'gsap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -34,7 +34,7 @@ const CardDark = '#151114'
 
 
 const Home = () => {
-
+  
   return (
     <>
       <div className='container-1 h-full bg-[#b3d6fa] flex flex-col z-10 rounded-b-[7vh] rounded-bl-[7vh]'>
@@ -45,8 +45,8 @@ const Home = () => {
                 <Navbar />
                 <div className='flex w-screen' style={{ marginTop: "7vh", marginLeft : "5vh" }}>
                   <div className="container-7 h-[50vh]  w-1/2"> 
-                    <div className='flex flex-wrap w-[57vh] bg-transparent text-[7vh] gap-[1vh]' style={{ padding: "1vh" , marginLeft : "3vh"}}>
-                      <span style={{marginBottom : "-2vh"}} >Find</span>
+                    <div className=' frontQuote  flex flex-wrap w-[57vh] bg-transparent text-[7vh] gap-[1vh]' style={{ padding: "1vh" , marginLeft : "3vh"}}>
+                      <span  style={{marginBottom : "-2vh"}} >Find</span>
                       <span style={{marginBottom : "-2vh"}} >a</span>
                       <span style={{marginBottom : "-2vh"}} >local</span>
                       <span style={{marginBottom : "-2vh"}} >trusted</span>
