@@ -55,7 +55,7 @@ const Home = () => {
       </div>
       <div className="container-9 h-[100vh] rounded-b-[7vh] rounded-bl-[7vh]">
             </div>
-      <div className="container-9 h-[100vh] rounded-b-[7vh] rounded-bl-[7vh] z-[-1] fixed bottom-0 ">
+      <div className="container-9 h-[100vh] rounded-b-[7vh] rounded-bl-[7vh] z-[-1] fixed  bottom-0 ">
         <Footer />
       </div>
     </>
