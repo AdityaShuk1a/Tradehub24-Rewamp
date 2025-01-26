@@ -1,10 +1,11 @@
 import React from 'react';
+import StepsCard from './StepsCard';
 
 const HowItWorks = () => {
   const steps = [
     {
       id: 1,
-      image: "https://via.placeholder.com/150",
+      image: "src//assets//bro.png",
       heading: "Step 1",
       description: "Get matched with a trusted professional in minutes.",
       buttonText: "Learn More",
@@ -31,21 +32,7 @@ const HowItWorks = () => {
       <h2 className="text-center text-[4vh] font-bold ">How It Works</h2>
       <div className="flex justify-center items-center space-x-[3vw]">
         {steps.map((step) => (
-          <div
-            key={step.id}
-            className="w-[20vw] h-[20vh] bg-white shadow-lg rounded-lg flex flex-col items-center p-[2vh] text-center"
-          >
-            <img
-              src={step.image}
-              alt={step.heading}
-              className="w-[20vw] h-[20vw] object-cover rounded-full mb-[3vh]"
-            />
-            <h3 className="text-xl font-semibold mb-[2vh]">{step.heading}</h3>
-            <p className="text-gray-600 mb-[3vh]">{step.description}</p>
-            <button className="bg-blue-500 text-white px-[2vw] py-[1vh] rounded-full hover:bg-blue-600">
-              {step.buttonText}
-            </button>
-          </div>
+          <StepsCard stepImage={step.image} stepHeading={step.heading} stepDescription={step.description} stepButtonText={step.buttonText} />
         ))}
       </div>
     

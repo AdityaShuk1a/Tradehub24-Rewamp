@@ -6,7 +6,7 @@ const Card = ({tradeId, tradeHeading, tradeImage, tradeDescription}) => {
     <>
        
         <div class="p-8 max-w-lg border bg-indigo-300 rounded-2xl hover:shadow-xl hover:shadow-indigo-50 flex flex-col items-center"
-    href="#">
+    href="#" style={{marginLeft : "5vh"}} >
     <img src="https://loremflickr.com/800/600/girl" class="shadow rounded-lg overflow-hidden border" />
     <div class="mt-8 flex flex-col justify-center items-center text-center">
         <h4 class="font-bold text-xl">{tradeHeading}</h4>

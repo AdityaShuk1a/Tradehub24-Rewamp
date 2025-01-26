@@ -17,7 +17,7 @@ const CustomButton = ({  buttonName }) => {
 
         
           </button> 
-          <motion.div  animate={hover ? { y: "-76%", scale: 1.2 } : { y: 0 }} transition={{ ease: easeInOut, delay: 0.01 }} className='w-[20vh] h-[20vh] absolute rounded-full mix-blend-difference customButton z-10 bg-purple-300'> 
+          <motion.div  animate={hover ? { y: "-76%", scale: 1.2 } : { y: 0 }} transition={{ ease: easeInOut, delay: 0.01 }} className='w-[25vh] h-[25vh] absolute rounded-full mix-blend-difference customButton z-10 bg-purple-300'> 
             </motion.div> 
             </div>
     </>

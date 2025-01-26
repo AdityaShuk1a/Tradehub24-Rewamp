@@ -38,24 +38,24 @@ const Home = () => {
   return (
     <>
       <div className='container-1 h-full bg-[#b3d6fa] flex flex-col z-10 rounded-b-[7vh] rounded-bl-[7vh]'>
-        <div className='container-2 h-full bg-[#53678d] flex flex-col rounded-b-[7vh] rounded-bl-[7vh]'>
+        <div className='container-2 h-[390vh] bg-[#53678d] flex flex-col rounded-b-[7vh] rounded-bl-[7vh]'>
           <div className='container-3 h-full bg-[#b3d6fa] flex flex-col rounded-b-[7vh] rounded-bl-[7vh]'>
             <div className="container-4 h-[210vh] w-screen bg-[#0f0] flex flex-col  rounded-b-[7vh] rounded-bl-[7vh]">
               <div className="container-5 h-[110vh] w-screen bg-gradient-to-br from-[#26c6f7] to-[#c1c58d] justify-center rounded-b-[7vh] rounded-bl-[7vh]">
                 <Navbar />
-                <div className='flex w-screen' style={{ marginTop: "7vh" }}>
+                <div className='flex w-screen' style={{ marginTop: "7vh", marginLeft : "5vh" }}>
                   <div className="container-7 h-[50vh]  w-1/2"> 
-                    <div className='flex flex-wrap w-[57vh] bg-transparent text-[7vh] gap-[1vh]' style={{ padding: "1.44vh" , marginLeft : "3vh"}}>
-                      <span>Find</span>
-                      <span>a</span>
-                      <span>local</span>
-                      <span>trusted</span>
-                      <span className='text-red-500'>Roofer</span>
+                    <div className='flex flex-wrap w-[57vh] bg-transparent text-[7vh] gap-[1vh]' style={{ padding: "1vh" , marginLeft : "3vh"}}>
+                      <span style={{marginBottom : "-2vh"}} >Find</span>
+                      <span style={{marginBottom : "-2vh"}} >a</span>
+                      <span style={{marginBottom : "-2vh"}} >local</span>
+                      <span style={{marginBottom : "-2vh"}} >trusted</span>
+                      <span className='text-red-500' style={{marginBottom : "-2vh"}}>Roofer</span>
                     </div>
                     <div className='' style={{ marginTop: "2.88vh", padding: "1.44vh", fontSize: "1.92vh" ,  marginLeft : "3vh"}}>
                       <h1>The idea framework to learn how to</h1>
                       <h1>manage all aspects of startup</h1>
-                      <div className='rounded-2xl overflow-hidden bg-black w-fit ' >
+                      <div className='rounded-2xl overflow-hidden bg-black w-fit ' style={{marginTop : "5vh"}} >
 
                       <CustomButton buttonName={"Start For Free"} />
                       </div>
@@ -84,12 +84,14 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="container-9 h-[100vh] rounded-b-[7vh] rounded-bl-[7vh]">
+            <div className="container-9 h-[90vh] flex items-center justify-center rounded-b-[7vh] rounded-bl-[7vh]">
               < HireSafely />
             </div>
           </div>        
+          <div className='w-screen h-[full] flex justify-center ' style={{padding : "10vh"}} >
 
           <ReviewsCarousel />
+          </div>
           
           <div className="container-10 h-[100vh] w-1/2">
           </div>
@@ -99,7 +101,7 @@ const Home = () => {
       </div>
       <div className="container-9 h-[100vh] rounded-b-[7vh] rounded-bl-[7vh]">
       </div>
-      <div className="container-9 h-[100vh] rounded-b-[7vh] rounded-bl-[7vh] z-[-1] fixed bottom-0 ">
+      <div className="container-9 h-[100vh] rounded-b-[7vh] rounded-bl-[7vh] z-[-1] fixed bottom-0 bg-[#1E2939]"  >
         <Footer />
       </div>
     </>

@@ -41,8 +41,8 @@ const ReviewsCarousel = () => {
   ];
 
   return (
-    <div className="my-[5vh]">
-      <h2 className="text-center text-[4vh] font-bold my-[5vh]">What Our Customers Are Saying</h2>
+    <div className="my-[5vh] w-screen h-full">
+      <h2 className="text-center text-[4vh] my-[5vh]" style={{fontWeight : "bold"}}>What Our Customers Are Saying</h2>
       <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
           {reviewsData.map((_, index) => (
@@ -62,8 +62,8 @@ const ReviewsCarousel = () => {
             <div key={review.id} className={`carousel-item ${index === 0 ? "active" : ""}`}>
               <div class='w-full h-[70vh]  flex flex-col justify-center items-center text-pink-300' >
                 
-              <img src={review.image} alt={review.name} class="d-block w-[20vh] h-[50vh] object-cover"  />
-              <div class="carousel-caption d-none d-md-block">
+              <img src={review.image} alt={review.name} class="d-block w-[20vh] h-[45vh] object-cover"  />
+              <div class="carousel-caption d-none d-md-block" >
                 <h5>{review.name}</h5>
                 <p>{review.review}</p>
               </div>

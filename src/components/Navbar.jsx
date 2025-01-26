@@ -7,7 +7,7 @@ const Navbar = () => {
       <div>
         <img src="https://tradehub24.com/profile_images/logo.png" className='w-[40vh] h-[7vh]' alt="Logo" />
       </div>
-      <div className='flex gap-[2.5vh] text-xl'>
+      <div className='flex gap-[2.5vh] text-2xl'>
         <div>How It Works</div>
         <div>Join Us</div>
         <div>Popular Trades</div>
