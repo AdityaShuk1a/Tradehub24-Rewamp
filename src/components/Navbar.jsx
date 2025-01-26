@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <div className='w-screen h-[15vh] bg-purple-800 flex justify-between items-center' style={{ padding: "5vh" }}>
+    <div className='w-screen h-[15vh] bg-[#5f77a9] flex justify-between items-center' style={{ padding: "5vh" }}>
       <div>
         <img src="https://tradehub24.com/profile_images/logo.png" className='w-[40vh] h-[7vh]' alt="Logo" />
       </div>
