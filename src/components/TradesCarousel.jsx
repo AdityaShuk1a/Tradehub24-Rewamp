@@ -65,8 +65,9 @@ const TradesCarousel = () => {
   ];
 
   return (
-    <div className="my-[5vh]">
-      <h2 className="text-center text-[4vh] font-bold my-[5vh]">Our Popular Trades</h2>
+    <>
+    {/* <div className=" "> */}
+      <h2 className="text-center text-[4vh] font-bold my-[5vh]" style={{marginTop : "10vh" , marginBottom : "7vh"}} >Our Popular Trades</h2>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={30}
@@ -97,7 +98,8 @@ const TradesCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    {/* </div> */}
+    </>
   );
 };
 

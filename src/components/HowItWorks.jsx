@@ -26,13 +26,14 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div className="bg-amber-100 py-[6vh]">
-      <h2 className="text-center text-[5vh] font-bold mb-[5vh]">How It Works</h2>
+    <>
+    
+      <h2 className="text-center text-[4vh] font-bold ">How It Works</h2>
       <div className="flex justify-center items-center space-x-[3vw]">
         {steps.map((step) => (
           <div
             key={step.id}
-            className="w-[30vw] h-[20vh] bg-white shadow-lg rounded-lg flex flex-col items-center p-[2vh] text-center"
+            className="w-[20vw] h-[20vh] bg-white shadow-lg rounded-lg flex flex-col items-center p-[2vh] text-center"
           >
             <img
               src={step.image}
@@ -47,7 +48,8 @@ const HowItWorks = () => {
           </div>
         ))}
       </div>
-    </div>
+    
+    </>
   );
 };
 
