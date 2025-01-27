@@ -2,7 +2,7 @@ import React from "react";
 
 const DownloadTradehub = () => {
   return (
-    <div className="bg-amber-200 flex items-center justify-center h-screen px-6">
+    <div className=" flex items-center justify-center h-screen px-6">
       {/* Wrapper to center everything */}
       <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-6xl space-y-8 lg:space-y-0 lg:space-x-8">
         {/* Image Section */}

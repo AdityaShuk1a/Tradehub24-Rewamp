@@ -13,7 +13,7 @@ const HireSafely = () => {
         start: 'top 75%',
         end: 'top 25%',
         toggleActions: "play none none reverse",
-        markers: true
+        // markers: true
       }
     });
 
