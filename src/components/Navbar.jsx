@@ -58,8 +58,7 @@ const Navbar = () => {
           src="https://tradehub24.com/profile_images/logo.png" 
           alt="Logo" 
           style={{
-            width: "clamp(130px, 25vw, 35vh)",
-            height: "auto",
+            width: "30vh",
             maxHeight: "3.5vh"
           }}
         />

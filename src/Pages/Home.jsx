@@ -43,7 +43,7 @@ const Home = () => {
       flexDirection: "column", 
       width: "100%",
       height: "100%",
-      backgroundColor: "linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)",
+      backgroundColor: "rgba(255, 255, 255, 0.1)",
       margin: 0,
       padding: 0,
       overflowX: "hidden"
