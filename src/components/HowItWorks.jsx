@@ -29,7 +29,7 @@ const HowItWorks = () => {
   return (
     <>
     
-      <h2 className="text-center text-[4vh] font-bold ">How It Works</h2>
+      <h2 className=" howItWorks text-center text-[4vh] font-bold ">How It Works</h2>
       <div className="flex justify-center items-center space-x-[3vw]">
         {steps.map((step) => (
           <StepsCard stepImage={step.image} stepHeading={step.heading} stepDescription={step.description} stepButtonText={step.buttonText} />

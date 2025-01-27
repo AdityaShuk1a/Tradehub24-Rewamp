@@ -52,7 +52,7 @@ const Home = () => {
                       <span style={{marginBottom : "-2vh"}} >trusted</span>
                       <span className='text-red-500' style={{marginBottom : "-2vh"}}>Roofer</span>
                     </div>
-                    <div className='' style={{ marginTop: "2.88vh", padding: "1.44vh", fontSize: "1.92vh" ,  marginLeft : "3vh"}}>
+                    <div className='  frontQuote' style={{ marginTop: "2.88vh", padding: "1.44vh", fontSize: "1.92vh" ,  marginLeft : "3vh"}}>
                       <h1>The idea framework to learn how to</h1>
                       <h1>manage all aspects of startup</h1>
                       <div className='rounded-2xl overflow-hidden bg-black w-fit ' style={{marginTop : "5vh"}} >
@@ -62,7 +62,7 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="container-8 h-[50vh]  w-1/2 flex justify-center items-center">
-                    <img src={broImg} alt="" style={{ width: "38.46vh" }} />
+                    <img className='img1' src={broImg} alt="" style={{ width: "38.46vh" }} />
                   </div>
                 </div>
                 <div className=' h-[23vh]  bg-[] ' style={{ margin : "8vh" }}>
@@ -72,7 +72,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="my-8 ">
+              <div className=".trade my-8 ">
           
                 <TradesCarousel />
               </div>

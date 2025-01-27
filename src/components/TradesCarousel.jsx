@@ -67,7 +67,7 @@ const TradesCarousel = () => {
 
   return (
     <>
-      <h2 className="text-center text-[4vh] font-bold my-[5vh]" style={{ marginTop: "10vh", marginBottom: "7vh" }}>Our Popular Trades</h2>
+      <h2 className=" tradeheading text-center text-[4vh] font-bold my-[5vh]" style={{ marginTop: "10vh", marginBottom: "7vh" }}>Our Popular Trades</h2>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={30}
