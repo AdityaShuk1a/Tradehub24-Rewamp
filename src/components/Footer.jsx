@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="flex flex-col h-screen">
       {/* Main Support Section */}
-      <div className="flex-grow h-[61vh] w-screen bg-[#53678d] rounded-b-[7vh] rounded-bl-[7vh]">
+      <div className="flex-grow h-[61vh] w-screen bg-[#53678d]">
         <Support />
       </div>
       
