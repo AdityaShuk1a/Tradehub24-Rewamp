@@ -40,8 +40,8 @@ const HireSafely = () => {
 
   return (
     <div className="bg-[#F0F5FF]">
-      <div className="backdrop-blur-sm rounded-xl">
-        <div className="backdrop-blur-sm rounded-lg shadow-sm">
+      <div className=" rounded-xl">
+        <div className="rounded-lg shadow-sm">
           <div className="hireSafelyContainer" style={{
             width: "90vw",
             minHeight: "80vh",

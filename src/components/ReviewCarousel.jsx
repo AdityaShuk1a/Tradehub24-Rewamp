@@ -131,7 +131,7 @@ const ReviewsCarousel = () => {
 
   return (
     <div className="bg-gradient-to-b from-[#EDF2F7] to-[#F7FAFC]">
-      <div className="backdrop-blur-sm rounded-xl shadow-sm">
+      <div className=" rounded-xl shadow-sm">
         <div className="reviewCarouselContainer" style={{
           width: "100%",
           padding: "4vh 3vw",

@@ -49,7 +49,7 @@ const HowItWorks = () => {
 
   return (
     <div className="w-full flex flex-col items-center px-4 bg-gradient-to-b from-[#F7F9FC] to-[#EDF2F7]">
-      <div className="backdrop-blur-sm rounded-xl shadow-sm w-full max-w-6xl mx-auto">
+      <div className=" rounded-xl shadow-sm w-full max-w-6xl mx-auto">
         <div className="howItWorksContainer" style={{
           width: "95%",
           display: "flex",
@@ -62,8 +62,8 @@ const HowItWorks = () => {
           gap: "2.5vh",
           minHeight: "fit-content",
           marginTop: "1vh",
-          backgroundColor: "rgba(255, 255, 255, 0.1)",
-          backdropFilter: "blur(5px)",
+          
+          
           opacity: 0,  // Set initial opacity to 0
           '@media (max-width: 768px)': {
             width: "90%",
