@@ -7,13 +7,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HireSafely = () => {
   useEffect(() => {
+    window.addEventListener('mousewheel', () => {
+      console.log("mousewheel");
+    });
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.hireSafelyContainer',
         start: 'top 75%',
         end: 'top 25%',
-        toggleActions: "play none none reverse",
-        markers: true
+        toggleActions: "play none none reverse"
       }
     });
 

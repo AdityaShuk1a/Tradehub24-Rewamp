@@ -130,7 +130,7 @@ const TradesCarousel = () => {
       scrollTrigger: {
         trigger: '.tradesCarouselHeadingParent',
         scroller: 'body',
-        start: 'top 50%',
+        start: 'top 60%',
         end: 'top 0%',
         toggleActions: "play none none reverse",
       }

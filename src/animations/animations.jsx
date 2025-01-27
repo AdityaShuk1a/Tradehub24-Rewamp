@@ -1,6 +1,25 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger); 
+
+export const navbarUp = () => {
+  gsap.to('.navbar', {
+    y: -300,
+    duration: 0.5,
+    opacity: 0
+    
+  });
+};
+
+export const navbarDown = () => {
+  gsap.to('.navbar', {
+    y: 0,
+    duration: 0.5,
+    opacity: 1
+    
+  });
+};
+
 export const animation = () => {
     gsap.fromTo('.logo', {
       y: -50,

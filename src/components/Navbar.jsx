@@ -39,27 +39,36 @@ const Navbar = () => {
   // }, []);
 
   return (
-    <div className='w-full flex flex-col md:flex-row justify-between items-center' style={{ 
-      padding: "clamp(10px, 3vw, 5vh)",
-      minHeight: "clamp(60px, 15vh, 120px)",
-      gap: "clamp(10px, 2vw, 20px)"
-    }}>
+    <div className='w-full navbar bg-[#45455d4e] flex flex-col md:flex-row justify-between items-center' 
+      style={{ 
+        position: "fixed", 
+        top: 0, 
+        left: 0, 
+        right: 0, 
+        zIndex: 1000,
+        padding: "clamp(10px, 2.2vw, 3.5vh)",
+        gap: "clamp(10px, 1.8vw, 18px)",
+        height: "10vh",
+        backdropFilter: "blur(8px)",
+        backgroundColor: "rgba(69, 69, 93, 0.3)"
+      }}>
+      
       <div className='logo'>
         <img 
           src="https://tradehub24.com/profile_images/logo.png" 
           alt="Logo" 
           style={{
-            width: "clamp(150px, 30vw, 40vh)",
+            width: "clamp(130px, 25vw, 35vh)",
             height: "auto",
-            maxHeight: "7vh"
+            maxHeight: "3.5vh"
           }}
         />
       </div>
       
       <div style={{
-        fontSize: "clamp(14px, 1.8vw, 24px)",
-        gap: "clamp(10px, 2.5vh, 30px)"
-      }} className='flex flex-wrap justify-center gap-[2.5vh]'>
+        fontSize: "clamp(13px, 1.6vw, 22px)",
+        gap: "clamp(10px, 2.2vh, 28px)"
+      }} className='flex flex-wrap justify-center gap-[2vh]'>
         <div className='nav-item cursor-pointer hover:text-blue-500'>How It Works</div>
         <div className='nav-item cursor-pointer hover:text-blue-500'>Join Us</div>
         <div className='nav-item cursor-pointer hover:text-blue-500'>Popular Trades</div>
@@ -68,9 +77,9 @@ const Navbar = () => {
       </div>
 
       <div style={{
-        fontSize: "clamp(12px, 1.5vw, 20px)",
-        gap: "clamp(8px, 2.5vh, 25px)"
-      }} className='flex gap-[2.5vh] button-container'>
+        fontSize: "clamp(12px, 1.4vw, 20px)",
+        gap: "clamp(8px, 2.2vh, 22px)"
+      }} className='flex gap-[2vh] button-container'>
         <CustomButton buttonName={"Login"} />
         <CustomButton buttonName={"Start Free Trial"} />
       </div>
