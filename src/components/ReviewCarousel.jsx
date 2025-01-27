@@ -10,21 +10,84 @@ const ReviewsCarousel = () => {
   const reviews = [
     {
       id: 1,
-      name: "John Doe",
+      name: "John Anderson",
       role: "Homeowner",
-      image: "https://via.placeholder.com/150",
-      review: "Excellent service! The platform made it easy to find a reliable tradesperson.",
+      image: "/src/assets/Customers/person1.jpg",
+      review: "Excellent service! The platform made it easy to find a reliable tradesperson. The plumber I hired was professional and efficient.",
       rating: 5
     },
     {
       id: 2,
-      name: "Jane Smith",
+      name: "Sarah Mitchell",
       role: "Business Owner",
-      image: "https://via.placeholder.com/150",
-      review: "Great experience from start to finish. Highly recommended!",
+      image: "/src/assets/Customers/person2.jpg",
+      review: "As a cafe owner, I needed urgent electrical work done. Found a great electrician within hours. Outstanding platform!",
+      rating: 5
+    },
+    {
+      id: 3,
+      name: "David Chen",
+      role: "Property Manager",
+      image: "/src/assets/Customers/person3.jpg",
+      review: "Managing multiple properties is easier with TradeHub24. Quick access to qualified trades people whenever needed.",
       rating: 4
     },
-    // ... add more reviews as needed
+    {
+      id: 4,
+      name: "Emma Thompson",
+      role: "Homeowner",
+      image: "/src/assets/Customers/person4.jpg",
+      review: "Had my bathroom renovated through a tradesperson found here. The whole process was smooth and transparent.",
+      rating: 5
+    },
+    {
+      id: 5,
+      name: "Michael Roberts",
+      role: "Restaurant Owner",
+      image: "/src/assets/Customers/person5.jpg",
+      review: "The verification system gives real peace of mind. Found a reliable handyman for our restaurant maintenance.",
+      rating: 4
+    },
+    {
+      id: 6,
+      name: "Lisa Patel",
+      role: "Landlord",
+      image: "/src/assets/Customers/person6.jpg",
+      review: "Perfect for landlords! Easy to find trusted trades people for various property maintenance needs.",
+      rating: 5
+    },
+    {
+      id: 7,
+      name: "James Wilson",
+      role: "Office Manager",
+      image: "/src/assets/Customers/person7.jpg",
+      review: "The platform saved us time and money. Great for finding commercial maintenance contractors.",
+      rating: 4
+    },
+    {
+      id: 8,
+      name: "Maria Garcia",
+      role: "Homeowner",
+      image: "/src/assets/Customers/person8.jpg",
+      review: "From painting to plumbing, I've found all my home improvement professionals here. Highly recommend!",
+      rating: 5
+    },
+    {
+      id: 9,
+      name: "Thomas Brown",
+      role: "Shop Owner",
+      image: "/src/assets/Customers/person9.jpg",
+      review: "Quick response times and professional service. The booking system is straightforward and efficient.",
+      rating: 4
+    },
+    {
+      id: 10,
+      name: "Sophie Taylor",
+      role: "Real Estate Agent",
+      image: "/src/assets/Customers/person10.jpg",
+      review: "Essential tool for real estate professionals. Makes property maintenance and renovations hassle-free.",
+      rating: 5
+    }
   ];
 
   return (
