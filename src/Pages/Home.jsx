@@ -55,12 +55,13 @@ const Home = () => {
         padding: "2vh 0",
         margin: 0,
         display: "flex",
+        alignItems: "center",
         flexDirection: "column"
       }}>
         <Navbar />
-        <div className='' style={{
+        <div className='border-2 rounded-4xl border-black' style={{
           display: "flex",
-          width: "100%",
+          width: "90%",
           flexDirection: "row",
           marginTop: "15vh",
           padding: "3vw",
