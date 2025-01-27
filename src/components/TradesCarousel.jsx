@@ -78,13 +78,13 @@ const TradesCarousel = () => {
     }, {
       y: 0,
       opacity: 1,
-      duration: 0.8,
+      duration: 0.4,
       scrollTrigger: {
         trigger: '.tradesCarouselHeadingParent',
         scroller: 'body',
         start: 'top 60%',
         end: 'top 0%',
-        // toggleActions: "play none none reverse"
+        toggleActions: "play none none reverse"
       }
     })
 
@@ -94,14 +94,15 @@ const TradesCarousel = () => {
     }, {
       x: 0,
       opacity: 1,
-      duration: 0.8,
+      duration: 0.4,
       stagger: 0.3,
       ease: "power3.out",
       scrollTrigger: {
         trigger: '.tradesCarouselHeadingParent',
         scroller: 'body',
         start: 'top 50%',
-        end: 'top 0%'
+        end: 'top 0%',
+        toggleActions: "play none none reverse",
       }
     });
 

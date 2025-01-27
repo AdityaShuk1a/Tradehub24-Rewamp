@@ -16,8 +16,7 @@ const ReviewsCarousel = () => {
         trigger: '.reviewCarouselContainer',
         start: 'top 75%',
         end: 'top 25%',
-        toggleActions: "play none none reverse",
-        markers: true
+        toggleActions: "play none none reverse"
       }
     });
 
@@ -27,7 +26,7 @@ const ReviewsCarousel = () => {
     }, {
       y: 0,
       opacity: 1,
-      duration: 1,
+      duration: 0.4,
       ease: "power2.inOut"
     })
     .fromTo('.reviewCarouselSlide', {
@@ -36,7 +35,7 @@ const ReviewsCarousel = () => {
     }, {
       x: 0,
       opacity: 1,
-      duration: 1,
+      duration: 0.4,
       stagger: 0.5,
       ease: "power2.out"
     }, "-=0.5");
