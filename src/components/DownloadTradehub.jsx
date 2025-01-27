@@ -4,9 +4,11 @@ import playStore from '/src/assets/playStore.webp'
 
 const DownloadTradehub = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center w-full min-h-[70vh] gap-16 p-8">
+    <div className="flex flex-col md:flex-row  justify-center items-center w-full min-h-[70vh] gap-16 p-8">
       {/* Left side content */}
-      <div className="flex flex-col items-center justify-center space-y-12 md:w-1/2">
+      <div className="flex flex-col border-2 rounded-4xl border-white items-center justify-center space-y-12 md:w-1/2" style={{
+        padding: "10vh",
+      }}>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center">
           Download Our App
         </h2>
