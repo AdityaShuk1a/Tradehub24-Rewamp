@@ -3,15 +3,15 @@ import Support from '../components/Support.jsx'
 
 const Footer = () => {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col  h-screen">
       {/* Main Support Section */}
-      <div className="flex-grow h-[61vh] w-screen bg-[#53678d]">
+      <div className="flex-grow h-[61vh] w-screen ">
         <Support />
       </div>
       
       {/* Footer Section */}
       <div
-        className="w-screen bg-gray-800 text-white flex-grow"
+        className="w-screen  bg-gray-800 text-white flex-grow"
         style={{
           padding: '5vh 8vw',
           marginTop: 'auto', // Ensures the footer stays at the bottom

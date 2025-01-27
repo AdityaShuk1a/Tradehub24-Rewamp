@@ -177,7 +177,7 @@ const ReviewsCarousel = () => {
             }}
           >
             {reviews.map((review) => (
-              <SwiperSlide key={review.id} className="reviewCarouselSlide">
+              <SwiperSlide key={review.id} className="reviewCarouselSlide border-2 rounded-2xl">
                 <div style={{
                   backgroundColor: "#FFFFFF",
                   borderRadius: "1vh",

@@ -68,6 +68,7 @@ function App() {
             height: "100%",
             objectFit: "contain",
             userSelect: "none",
+            
             WebkitUserSelect: "none"
           }}
         />

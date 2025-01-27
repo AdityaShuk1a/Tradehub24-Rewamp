@@ -23,7 +23,6 @@ import DownloadTradehub from '../components/DownloadTradehub.jsx';
 // 53678d
 //bdf
 //e99f9f
-
 const topL = '#1D8189'
 const botR = '#B89D91'
 const innerLight = '#767572'
@@ -40,33 +39,30 @@ const Home = () => {
   return (
     <div style={{
       display: "flex",
-      flexDirection: "column", 
+      flexDirection: "column",
       width: "100%",
-      height: "100%",
-      backgroundColor: "rgba(255, 255, 255, 0.1)",
+      backgroundColor: "white",
       margin: 0,
       padding: 0,
+      minHeight: "100vh",
       overflowX: "hidden"
-      // overflowY: "hidden",
     }}>
       {/* Part 1 - Hero Section */}
       <div style={{
-        background: "linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)",
-        Height: "100vh",
+        background: "white",
+        minHeight: "100vh",
         padding: "2vh 0",
-        marginTop: "14vh",
+        margin: 0,
         display: "flex",
-        flexDirection: "column",
-        color: "#1A237E"
+        flexDirection: "column"
       }}>
         <Navbar />
-        <div style={{
+        <div className='bg-[#f2efef]' style={{
           display: "flex",
           width: "100%",
           flexDirection: "row",
-          margin: "2vh 0",
+          marginTop: "15vh",
           padding: "3vw",
-          backgroundColor: "rgba(255, 255, 255, 0.1)",
           backdropFilter: "blur(5px)",
           '@media (max-width: 768px)': {
             flexDirection: "column",
@@ -96,7 +92,7 @@ const Home = () => {
               <p>
                 Find a local trusted
               </p>
-              <p className='text-[#4299E1]'>Roofer</p>
+              <span className='text-[#4299E1]'>Roofer</span>
             </div>
             <div style={{
               margin: "0 0 0 3vh"
@@ -133,72 +129,66 @@ const Home = () => {
       </div>
 
       {/* Part 2 - How It Works */}
-      <div style={{
-        background: "linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%)",
-        Height: "100vh",
+      <div className='bg-[#88bbd3]' style={{
+        
+        minHeight: "100vh",
         padding: "5vh 3vw",
         margin: 0,
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
-        color: "#E65100"
+        justifyContent: "center"
       }}>
         <HowItWorks />
       </div>
 
       {/* Part 3 - Trades Section */}
-      <div style={{
-        background: "linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)",
-        Height: "100vh",
+      <div className='bg-[#f2efef]' style={{
+        
+        minHeight: "100vh",
         padding: "5vh 3vw",
         margin: 0,
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
-        color: "#1B5E20"
+        justifyContent: "center"
       }}>
         <TradesCarousel />
       </div>
 
       {/* Part 4 - Hire Safely */}
-      <div style={{
-        background: "linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%)",
-        Height: "100vh",
+      <div className='bg-[#88bbd3]' style={{
+        
+        minHeight: "100vh",
         padding: "5vh 3vw",
         margin: 0,
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
-        color: "#4A148C"
+        justifyContent: "center"
       }}>
         <HireSafely />
       </div>
 
       {/* Part 5 - Reviews and Download */}
       <div style={{
-        background: "linear-gradient(135deg, #E1F5FE 0%, #B3E5FC 100%)",
-        Height: "100vh",
+        
+        minHeight: "100vh",
         padding: "5vh 3vw",
         margin: 0,
         display: "flex",
         flexDirection: "column",
-        gap: "5vh",
-        color: "#01579B"
+        gap: "5vh"
       }}>
         <div style={{
           width: "100%",
           margin: "0 0 5vh 0",
           padding: "3vh",
-          backgroundColor: "rgba(255, 255, 255, 0.2)",
           borderRadius: "2vh"
         }}>
           <ReviewsCarousel />
         </div>
-        <div style={{
+        <div className='bg-[#88bbd3]' style={{
           width: "100%",
           margin: 0,
           padding: "3vh",
-          backgroundColor: "rgba(255, 255, 255, 0.2)",
           borderRadius: "2vh"
         }}>
           <DownloadTradehub />
@@ -206,15 +196,13 @@ const Home = () => {
       </div>
 
       {/* Footer */}
-      <footer style={{
-        background: "linear-gradient(to right, #1A237E, #0D47A1)",
-        Height: "40vh",
+      <footer className='bg-[#88bbd3]' style={{
+        minHeight: "40vh",
         margin: 0,
         padding: "4vh 3vw",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        color: "#FFFFFF",
         boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)"
       }}>
         <Footer />

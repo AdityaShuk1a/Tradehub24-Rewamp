@@ -14,8 +14,8 @@ const Support = () => {
   ];
 
   return (
-    <div className="flex items-start justify-center h-screen " style={{ paddingLeft: '1.5rem', paddingRight: '1.5rem' }}>
-      <div className=" rounded-t-lg shadow-lg w-full max-w-4xl lg:max-w-6xl flex flex-col justify-center" style={{ height: '66.67vh', padding: '2rem' }}>
+    <div className="flex  items-start justify-center h-screen " style={{ paddingLeft: '1.5rem', paddingRight: '1.5rem' }}>
+      <div className=" rounded-t-lg bg-white shadow-lg w-full max-w-4xl lg:max-w-6xl flex flex-col justify-center" style={{ height: '66.67vh', padding: '2rem' }}>
         <div style={{ marginBottom: '3rem' }}>
           <h1 className="text-3xl font-bold mb-8" style={{ textAlign: 'center' }}>
             Do you have a question or need support?

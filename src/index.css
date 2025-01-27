@@ -13,6 +13,11 @@
   box-sizing: border-box;
   font-family: CustomFont;
   cursor: none;
+  color: black;
+
+}
+span{
+  color: red;
 }
 
 html, body{
