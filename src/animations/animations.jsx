@@ -27,7 +27,7 @@ export const animation = () => {
       duration: 0.4,
       stagger: 0.07
     })
-    .fromTo('.button-container button', {
+    .fromTo('.button-container div', {
       y: -30,
       opacity: 0
     }, {

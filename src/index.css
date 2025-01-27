@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@font-face {
+  font-family: 'CustomFont';
+  src: url('.//assets//Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+}
 ::selection{
   color: orange;
 }
@@ -7,6 +11,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: CustomFont;
 }
 
 html, body{

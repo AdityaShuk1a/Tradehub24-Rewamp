@@ -14,8 +14,8 @@ const CustomButton = ({ buttonName }) => {
         gap: "clamp(10px, 2.5vh, 30px)",
       }}
     > 
-      <button  
-        className={`rounded-2xl flex  justify-center items-center relative overflow-hidden bg-black ${hover ? 'text-white' : 'text-white'}`}
+      <div  
+        className={`rounded-2xl border-2 border-p urple-300 flex  justify-center items-center relative overflow-hidden bg-black ${hover ? 'text-white' : 'text-white'}`}
         style={{
           padding: "clamp(6px, 0.8vh, 9px)",
           width: "100%",
@@ -29,7 +29,7 @@ const CustomButton = ({ buttonName }) => {
         }}>
           {buttonName} 
         </span>
-      </button> 
+      </div> 
 
       <motion.div  
         animate={hover ? { y: "-76%", scale: 1.2 } : { y: 0 }} 
