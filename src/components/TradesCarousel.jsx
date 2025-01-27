@@ -11,7 +11,7 @@ const TradesCarousel = () => {
   const tradesData = [
     {
       id: 1,
-      image: "src/assets/bro.png",
+      image: "https://tradehub24.com/profile_images/tool.svg",
       title: "Plumbing Services",
       description: "Expert plumbing solutions for all your needs. From repairs to installations.",
     },

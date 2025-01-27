@@ -84,7 +84,7 @@ const Home = () => {
                 </div>
 
                 {/* How It Works Section */}
-                <div className='w-full flex justify-center' style={{ 
+                <div className='w-full flex justify-center items-center' style={{ 
                   padding: "clamp(15px, 3vw, 40px)"
                 }}>
                   <HowItWorks/>
