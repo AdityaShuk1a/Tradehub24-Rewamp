@@ -20,6 +20,11 @@ span{
   color: black;
 }
 
+a{
+  color: white;
+  text-decoration: none;
+  
+}
 html, body{
   min-height: 100vh;
   width: 100%;
