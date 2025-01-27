@@ -15,12 +15,12 @@ const Support = () => {
 
   return (
     <div className="flex  items-start justify-center " style={{ paddingLeft: '1.5rem', paddingRight: '1.5rem' }}>
-      <div className=" rounded-t-lg bg-white shadow-lg w-full max-w-4xl lg:max-w-6xl flex flex-col justify-center" style={{ height: '66.67vh', padding: '2rem' }}>
+      <div className=" rounded-4xl bg-white shadow-lg w-full max-w-4xl lg:max-w-6xl flex flex-col justify-center" style={{ height: '66.67vh', padding: '2rem' }}>
         <div style={{ marginBottom: '3rem' }}>
           <h1 className="text-3xl font-bold mb-8" style={{ textAlign: 'center' }}>
             Do you have a question or need support?
           </h1>
-          <div style={{ textAlign: 'center', width: 'fit-content', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', width: 'fit-content', margin: '4vh auto' }}>
             <CustomButton 
               buttonName="Contact Us"
               className=" px-8 w-fl"
@@ -56,7 +56,7 @@ const Support = () => {
             />
           </div>
 
-          <div className="pt-2" style={{ textAlign: 'center', width: 'fit-content', margin: '0 auto' }}>
+          <div className="pt-2" style={{ textAlign: 'center', width: 'fit-content', margin: '4vh auto' }}>
             <CustomButton 
               buttonName="Search Traders"
               className=" px-8"
@@ -64,7 +64,10 @@ const Support = () => {
           </div>
         </div>
 
-        <div className="mt-12" style={{ textAlign: 'center' }}>
+        <div className="" style={{
+          marginTop : "4vh", 
+          textAlign: 'center'
+           }}>
           <img 
             src="/src/assets/logo.png" 
             alt="Support" 
