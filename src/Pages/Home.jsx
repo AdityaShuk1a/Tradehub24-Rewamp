@@ -91,7 +91,7 @@ const Home = () => {
       </div>
 
       {/* Part 2 - How It Works */}
-      <div className="bg-gradient-to-br from-orange-50 to-orange-200 h-screen py-[5vh] px-[3vw] m-0 flex items-center justify-center text-orange-900">
+      <div className="bg-gradient-to-br from-teal-50 to-teal-200 h-screen py-[5vh] px-[3vw] m-0 flex items-center justify-center text-orange-900">
         <HowItWorks />
       </div>
 
