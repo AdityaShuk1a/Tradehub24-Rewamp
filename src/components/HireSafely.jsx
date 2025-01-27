@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HireSafely = () => {
   useEffect(() => {
+    
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.hireSafelyContainer',

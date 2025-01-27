@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Home from './Pages/Home';
-import { animation } from './animations/animations';
+import { animation, navbarUp, navbarDown } from './animations/animations';
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -18,13 +18,21 @@ function App() {
   }, []);
 
   useEffect(() => {
+    window.addEventListener('wheel', (e) => {
+      if(e.deltaY > 0){
+        
+        navbarUp();
+      } else {
+        navbarDown();
+      }
+    });
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
     const handleClick = () => {
       setIsHitting(true);
-      setTimeout(() => setIsHitting(false), 200);
+      setTimeout(() => setIsHitting(false), 300); // Match transition duration
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -44,14 +52,13 @@ function App() {
         left: mousePosition.x,
         transform: `
           translate(-50%, -50%) 
-          ${isHitting ? 'rotate(-45deg) scale(1.4)' : 'rotate(30deg) scaleX(1)'}
+          ${isHitting ? 'rotate(-45deg) scale(1.2)' : 'rotate(30deg) scale(1)'}
           scaleX(-1)  
         `,
         pointerEvents: "none",
         zIndex: 9999,
         width: "2vw",
-        height: "2vw",
-        
+        height: "2vw"
       }}>
         <img 
           src="src/assets/hammer.png" 
