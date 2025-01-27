@@ -16,6 +16,7 @@ import ReviewsCarousel from '../components/ReviewCarousel.jsx';
 import HowItWorks from '../components/HowItWorks.jsx';
 import HireSafely from '../components/HireSafely.jsx';
 import DownloadTradehub from '../components/DownloadTradehub.jsx';
+import { transform } from 'motion';
 
 
 
@@ -123,7 +124,7 @@ const Home = () => {
           </div>
           <div className="w-full md:w-1/2 flex justify-center items-center">
                 
-            <img className='heroImg w-[clamp(200px,35vw,400px)] h-auto' src={broImg} alt="hero" />
+            <img className='heroImg w-[clamp(200px,35vw,400px)] h-auto' src={broImg} alt="hero"  />
           </div>
         </div>
       </div>
@@ -196,17 +197,7 @@ const Home = () => {
       </div>
 
       {/* Footer */}
-      <footer className='bg-[#88bbd3]' style={{
-        minHeight: "40vh",
-        margin: 0,
-        padding: "4vh 3vw",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)"
-      }}>
-        <Footer />
-      </footer>
+      
     </div>
   );
 };
