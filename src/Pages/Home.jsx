@@ -42,7 +42,7 @@ const Home = () => {
       {/* Part 1 - Hero Section */}
       <div className="bg-gradient-to-br from-blue-50 to-blue-200 h-screen py-[2vh] m-0 flex flex-col text-blue-900">
         <Navbar />
-        <div className="flex w-full flex-row m-[2vh] p-[3vw] bg-white/10 backdrop-blur-[5px]">
+        <div className="flex w-full flex-row m-[2vh] p-[3vw] ">
           <div className="w-full flex flex-col gap-[3vh] p-[0_2vw]">
             <div className='frontQuote' style={{
               display: "flex",

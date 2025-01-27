@@ -23,7 +23,7 @@ const Support = () => {
           <div style={{ textAlign: 'center', width: 'fit-content', margin: '0 auto' }}>
             <CustomButton 
               buttonName="Contact Us"
-              className="backdrop-blur-sm px-8 w-fl"
+              className=" px-8 w-fl"
             />
           </div>
         </div>
@@ -59,7 +59,7 @@ const Support = () => {
           <div className="pt-2" style={{ textAlign: 'center', width: 'fit-content', margin: '0 auto' }}>
             <CustomButton 
               buttonName="Search Traders"
-              className="backdrop-blur-sm px-8"
+              className=" px-8"
             />
           </div>
         </div>

@@ -15,7 +15,7 @@ const CustomButton = ({ buttonName }) => {
       }}
     > 
       <div  
-        className={`rounded-2xl border-2 border-p urple-300 flex  justify-center items-center relative overflow-hidden bg-black ${hover ? 'text-white' : 'text-white'}`}
+        className={`rounded-2xl border-2 border-purple-300 flex  justify-center items-center relative overflow-hidden bg-black ${hover ? 'text-white' : 'text-white'}`}
         style={{
           padding: "clamp(6px, 0.8vh, 9px)",
           width: "100%",
