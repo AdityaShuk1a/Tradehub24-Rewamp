@@ -36,7 +36,7 @@ const ReviewsCarousel = () => {
       x: 0,
       opacity: 1,
       duration: 0.4,
-      stagger: 0.5,
+      stagger: 0.2,
       ease: "power2.out"
     }, "-=0.5");
 

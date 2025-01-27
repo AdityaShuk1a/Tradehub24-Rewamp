@@ -41,7 +41,7 @@ const Home = () => {
       display: "flex",
       flexDirection: "column",
       width: "100%",
-      backgroundColor: "white",
+      backgroundColor: "#f2efef",
       margin: 0,
       padding: 0,
       minHeight: "100vh",
@@ -49,7 +49,7 @@ const Home = () => {
     }}>
       {/* Part 1 - Hero Section */}
       <div style={{
-        background: "white",
+        background: "#f2efef",
         minHeight: "100vh",
         padding: "2vh 0",
         margin: 0,
@@ -57,7 +57,7 @@ const Home = () => {
         flexDirection: "column"
       }}>
         <Navbar />
-        <div className='bg-[#f2efef]' style={{
+        <div className='' style={{
           display: "flex",
           width: "100%",
           flexDirection: "row",
@@ -92,7 +92,7 @@ const Home = () => {
               <p>
                 Find a local trusted
               </p>
-              <span className='text-[#4299E1]'>Roofer</span>
+              <span  style={{color: "red"}}>Roofer</span>
             </div>
             <div style={{
               margin: "0 0 0 3vh"
