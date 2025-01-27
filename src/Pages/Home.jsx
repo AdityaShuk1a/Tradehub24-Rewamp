@@ -122,7 +122,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center items-center">
+          <div className="hover:scale-115 transition-transform duration-300 w-full md:w-1/2 flex justify-center items-center">
                 
             <img className='heroImg w-[clamp(200px,35vw,400px)] h-auto' src={broImg} alt="hero"  />
           </div>

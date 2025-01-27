@@ -14,14 +14,14 @@ const DownloadTradehub = () => {
           Get instant access to trusted professionals and manage your projects on the go
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-8">
-          <button className="hover:scale-105 transition-transform duration-300">
+          <button className="hover:scale-115 transition-transform duration-300">
             <img 
               src={appStore} 
               alt="Download on App Store" 
               className="h-16 md:h-20"
             />
           </button>
-          <button className="hover:scale-105 transition-transform duration-300">
+          <button className="hover:scale-115 transition-transform duration-300">
             <img 
               src={playStore} 
               alt="Get it on Play Store" 
