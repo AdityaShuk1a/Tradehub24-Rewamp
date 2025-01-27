@@ -38,12 +38,54 @@ const CardDark = '#151114'
 
 const Home = () => {
   return (
-    <div className="flex flex-col w-full h-full bg-black m-0 p-0 overflow-x-hidden">
+    <div style={{
+      display: "flex",
+      flexDirection: "column", 
+      width: "100%",
+      height: "100%",
+      backgroundColor: "linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)",
+      margin: 0,
+      padding: 0,
+      overflowX: "hidden"
+      // overflowY: "hidden",
+    }}>
       {/* Part 1 - Hero Section */}
-      <div className="bg-gradient-to-br from-blue-50 to-blue-200 h-screen py-[2vh] m-0 flex flex-col text-blue-900">
+      <div style={{
+        background: "linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)",
+        Height: "100vh",
+        padding: "2vh 0",
+        marginTop: "14vh",
+        display: "flex",
+        flexDirection: "column",
+        color: "#1A237E"
+      }}>
         <Navbar />
-        <div className="flex w-full flex-row m-[2vh] p-[3vw] bg-white/10 backdrop-blur-[5px]">
-          <div className="w-full flex flex-col gap-[3vh] p-[0_2vw]">
+        <div style={{
+          display: "flex",
+          width: "100%",
+          flexDirection: "row",
+          margin: "2vh 0",
+          padding: "3vw",
+          backgroundColor: "rgba(255, 255, 255, 0.1)",
+          backdropFilter: "blur(5px)",
+          '@media (max-width: 768px)': {
+            flexDirection: "column",
+            padding: "4vw",
+            margin: "1vh 0"
+          }
+        }}>
+          <div style={{
+            width: "50%",
+            display: "flex",
+            flexDirection: "column",
+            gap: "3vh",
+            padding: "0 2vw",
+            '@media (max-width: 768px)': {
+              width: "100%",
+              padding: "2vw",
+              gap: "2vh"
+            }
+          }}>
             <div className='frontQuote' style={{
               display: "flex",
               flexWrap: "wrap",
@@ -91,32 +133,90 @@ const Home = () => {
       </div>
 
       {/* Part 2 - How It Works */}
-      <div className="bg-gradient-to-br from-orange-50 to-orange-200 h-screen py-[5vh] px-[3vw] m-0 flex items-center justify-center text-orange-900">
+      <div style={{
+        background: "linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%)",
+        Height: "100vh",
+        padding: "5vh 3vw",
+        margin: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "#E65100"
+      }}>
         <HowItWorks />
       </div>
 
       {/* Part 3 - Trades Section */}
-      <div className="bg-gradient-to-br from-green-50 to-green-200 h-screen py-[5vh] px-[3vw] m-0 flex items-center justify-center text-green-900">
+      <div style={{
+        background: "linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)",
+        Height: "100vh",
+        padding: "5vh 3vw",
+        margin: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "#1B5E20"
+      }}>
         <TradesCarousel />
       </div>
 
       {/* Part 4 - Hire Safely */}
-      <div className="bg-gradient-to-br from-purple-50 to-purple-200 h-screen py-[5vh] px-[3vw] m-0 flex items-center justify-center text-purple-900">
+      <div style={{
+        background: "linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%)",
+        Height: "100vh",
+        padding: "5vh 3vw",
+        margin: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "#4A148C"
+      }}>
         <HireSafely />
       </div>
 
       {/* Part 5 - Reviews and Download */}
-      <div className="bg-gradient-to-br from-sky-50 to-sky-200 h-screen py-[5vh] px-[3vw] m-0 flex flex-col gap-[5vh] text-sky-900">
-        <div className="w-full mb-[5vh] p-[3vh] bg-white/20">
+      <div style={{
+        background: "linear-gradient(135deg, #E1F5FE 0%, #B3E5FC 100%)",
+        Height: "100vh",
+        padding: "5vh 3vw",
+        margin: 0,
+        display: "flex",
+        flexDirection: "column",
+        gap: "5vh",
+        color: "#01579B"
+      }}>
+        <div style={{
+          width: "100%",
+          margin: "0 0 5vh 0",
+          padding: "3vh",
+          backgroundColor: "rgba(255, 255, 255, 0.2)",
+          borderRadius: "2vh"
+        }}>
           <ReviewsCarousel />
         </div>
-        <div className="w-full m-0 p-[3vh] bg-white/20">
+        <div style={{
+          width: "100%",
+          margin: 0,
+          padding: "3vh",
+          backgroundColor: "rgba(255, 255, 255, 0.2)",
+          borderRadius: "2vh"
+        }}>
           <DownloadTradehub />
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-blue-900 to-blue-800 h-[40vh] m-0 py-[4vh] px-[3vw] flex items-center justify-center text-white shadow-[0_-4px_6px_rgba(0,0,0,0.1)]">
+      <footer style={{
+        background: "linear-gradient(to right, #1A237E, #0D47A1)",
+        Height: "40vh",
+        margin: 0,
+        padding: "4vh 3vw",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "#FFFFFF",
+        boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)"
+      }}>
         <Footer />
       </footer>
     </div>
