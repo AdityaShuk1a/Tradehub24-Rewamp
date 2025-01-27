@@ -91,37 +91,40 @@ const Home = () => {
                 margin: "7vh 0 0 3vh",
                 fontSize: "clamp(24px,4vw,60px)"
               }}>
-                <span>Find</span>
-                <span>a</span>
-                <span>local</span>
-                <span>trusted</span>
-                <span className='text-[#4299E1]'>Roofer</span>
+                <p>
+                  Find a local trusted
+                </p>
+                <p className='text-[#4299E1]'>Roofer</p>
               </div>
               <div style={{
                 margin: "0 0 0 3vh"
               }}>
                 <h1 className='frontQuote' style={{
-                  fontSize: "clamp(14px,1.8vw,24px)"
+                  fontSize: "clamp(14px,1.8vw,24px)",
+                  margin: "0"
                 }}>The idea framework to learn how to</h1>
                 <h1 className='frontQuote' style={{
-                  fontSize: "clamp(14px,1.8vw,24px)"
+                  fontSize: "clamp(14px,1.8vw,24px)",
+                  margin: "0  "
                 }}>manage all aspects of startup</h1>
+                
                 <div style={{
-                  marginTop: "4vh",
-                  marginLeft: "3vh",
+                  
+                  marginTop: "3vh",
                   borderRadius: "2xl",
                   overflow: "hidden",
-                  backgroundColor: "#4299E1",
                   width: "fit-content"
                 }}>
-                  <div className='frontQuote' >
+                  <div className='frontQuote'>
 
-                  <CustomButton buttonName={"Start For Free"} />
+                  <CustomButton  buttonName={"Start For Free"} />
                   </div>
+                  
                 </div>
               </div>
             </div>
             <div className="w-full md:w-1/2 flex justify-center items-center">
+                  
               <img className='heroImg w-[clamp(200px,35vw,400px)] h-auto' src={broImg} alt="hero" />
             </div>
           </div>
@@ -202,6 +205,8 @@ const Home = () => {
 
         {/* Footer */}
         <footer style={{
+          
+          bottom: 0,
           background: "linear-gradient(to right, #1A237E, #0D47A1)",
           minHeight: "40vh",
           margin: 0,

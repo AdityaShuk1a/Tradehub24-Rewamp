@@ -1,75 +1,150 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CustomButton from './CustomButton';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const HireSafely = () => {
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.hireSafelyContainer',
+        start: 'top 75%',
+        end: 'top 25%',
+        toggleActions: "play none none reverse",
+        markers: true
+      }
+    });
+
+    tl.fromTo('.hireSafelyHeading', {
+      y: 50,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power2.inOut"
+    })
+    .fromTo('.hireSafelyContent', {
+      y: 50,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power2.out"
+    }, "-=0.5");
+  }, []);
+
   return (
-    <div className='w-full md:w-[90%] flex justify-center items-center' style={{
-      padding: "clamp(10px, 2vw, 30px)",
-      minHeight: "clamp(250px, 60vh, 600px)",
+    <div className="hireSafelyContainer" style={{
+      width: "90vw",
+      minHeight: "80vh",
+      display: "flex",
+      flexDirection: "column",
+      gap: "4vh",
+      margin: "0 auto",
+      padding: "4vh 3vw",
+      backgroundColor: "#F7F9FC",
+      borderRadius: "2vh",
+      boxShadow: "0 4px 20px rgba(0, 0, 0, 0.05)",
       '@media (max-width: 768px)': {
-        padding: "15px",
-        minHeight: "500px"
+        width: "95vw",
+        padding: "3vh 4vw",
+        gap: "3vh"
       }
     }}>
-      <div className="flex flex-col md:flex-row w-full h-full items-center justify-center bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-        style={{
-          padding: "clamp(15px, 2vw, 25px)",
-          gap: "clamp(15px, 2.5vw, 30px)",
-          minHeight: "fit-content",
+      {/* Heading Section */}
+      <div className="hireSafelyHeading" style={{
+        textAlign: "center",
+        padding: "2vh 0"
+      }}>
+        <h2 style={{
+          fontSize: "3.5vw",
+          fontWeight: "200",
+          color: "#2D3748",
           '@media (max-width: 768px)': {
-            padding: "15px",
-            gap: "20px"
+            fontSize: "5vw"
           }
         }}>
-        
-        <div className="flex flex-col items-center w-full md:w-[40%]" style={{
-          gap: "clamp(10px, 2vh, 20px)",
+          Hire safely with our homeowner checklist
+        </h2>
+      </div>
+
+      {/* Content Section */}
+      <div className="hireSafelyContent" style={{
+        display: "flex",
+        flexDirection: "row",
+        gap: "4vw",
+        flex: 1,
+        '@media (max-width: 768px)': {
+          flexDirection: "column",
+          gap: "4vh"
+        }
+      }}>
+        {/* Left Side - Image and Button */}
+        <div style={{
+          flex: "0 0 40%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "3vh",
           '@media (max-width: 768px)': {
-            gap: "15px"
+            flex: "none"
           }
         }}>
-          <div className="w-full flex justify-center" style={{
-            height: "clamp(150px, 25vh, 250px)",
+          <div style={{
+            width: "100%",
+            height: "35vh",
             '@media (max-width: 768px)': {
-              height: "180px"
+              height: "30vh"
             }
           }}>
             <img 
-              className="h-full rounded-lg object-contain" 
               src="src/assets/bro2.png" 
               alt="Hire Safely" 
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+                borderRadius: "1vh"
+              }}
             />
           </div>
-          <div style={{ transform: "scale(0.9)" }}> {/* Slightly smaller button */}
-            <CustomButton buttonName={"Sign Up As Home Owner"} />
-          </div>
+          <CustomButton 
+            buttonName="Sign Up As Home Owner"
+            style={{
+              padding: "1.5vh 3vw",
+              fontSize: "1.2vw",
+              '@media (max-width: 768px)': {
+                fontSize: "3vw",
+                padding: "2vh 4vw"
+              }
+            }}
+          />
         </div>
-        
-        <div className="flex flex-col w-full md:w-[60%] justify-between leading-normal" style={{
-          gap: "clamp(8px, 1.5vh, 20px)",
+
+        {/* Right Side - Checklist */}
+        <div style={{
+          flex: "0 0 60%",
+          display: "flex",
+          flexDirection: "column",
+          gap: "2vh",
           '@media (max-width: 768px)': {
-            gap: "12px"
+            flex: "none"
           }
         }}>
-          <h5 className="font-bold tracking-tight text-gray-900 dark:text-white" style={{ 
-            fontSize: "clamp(20px, 2.5vw, 36px)",
-            marginBottom: "clamp(8px, 1.5vh, 20px)",
+          <h5 style={{
+            fontSize: "1.8vw",
+            color: "#2D3748",
+            marginBottom: "2vh",
             '@media (max-width: 768px)': {
-              fontSize: "22px",
-              marginBottom: "15px"
+              fontSize: "4vw"
             }
           }}>
-            Hire safely with our homeowner checklist
+            Follow our top tips for a safe and successful hire:
           </h5>
-          
-          <h4 className='tracking-tight text-gray-900 dark:text-white' style={{ 
-            fontSize: "clamp(16px, 1.8vw, 22px)",
-            '@media (max-width: 768px)': {
-              fontSize: "16px"
-            }
-          }}>
-            ✔️ Follow our top tips for a safe and successful hire:
-          </h4>
           
           {[
             "Verify credentials and insurance coverage",
@@ -80,22 +155,21 @@ const HireSafely = () => {
             "Access 24/7 customer support",
             "Get our FREE Homeowner's Safety Guide"
           ].map((text, index) => (
-            <h4 
-              key={index}
-              className="font-normal text-gray-700 dark:text-gray-400"
-              style={{ 
-                fontSize: "clamp(14px, 1.6vw, 18px)",
-                lineHeight: "1.4",
-                '@media (max-width: 768px)': {
-                  fontSize: "14px"
-                }
-              }}
-            >
-              ✔️ {text}
-            </h4>
+            <div key={index} style={{
+              fontSize: "1.4vw",
+              color: "#4A5568",
+              display: "flex",
+              alignItems: "center",
+              gap: "1vw",
+              '@media (max-width: 768px)': {
+                fontSize: "3.2vw"
+              }
+            }}>
+              <span>✔️</span>
+              <span>{text}</span>
+            </div>
           ))}
         </div>
-        
       </div>
     </div>
   );

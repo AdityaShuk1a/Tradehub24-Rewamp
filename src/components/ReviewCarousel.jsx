@@ -1,12 +1,52 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 const ReviewsCarousel = () => {
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.reviewCarouselContainer',
+        start: 'top 75%',
+        end: 'top 25%',
+        toggleActions: "play none none reverse",
+        markers: true
+      }
+    });
+
+    tl.fromTo('.reviewCarouselHeading', {
+      y: 50,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power2.inOut"
+    })
+    .fromTo('.reviewCarouselSlide', {
+      x: 100,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1,
+      duration: 1,
+      stagger: 0.5,
+      ease: "power2.out"
+    }, "-=0.5");
+
+    return () => {
+      tl.kill();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   const reviews = [
     {
       id: 1,
@@ -91,12 +131,25 @@ const ReviewsCarousel = () => {
   ];
 
   return (
-    <div className="w-full bg-gray-100 rounded-lg" style={{
-      padding: "clamp(20px, 4vw, 60px)"
+    <div className="reviewCarouselContainer" style={{
+      width: "100%",
+      padding: "4vh 3vw",
+      backgroundColor: "#F7F9FC",
+      borderRadius: "2vh",
+      '@media (max-width: 768px)': {
+        padding: "3vh 4vw"
+      }
     }}>
-      <h2 className="text-center font-bold" style={{
-        fontSize: "clamp(24px, 4vw, 48px)",
-        marginBottom: "clamp(20px, 4vh, 50px)"
+      <h2 className="reviewCarouselHeading" style={{
+        fontSize: "3vw",
+        fontWeight: "bold",
+        textAlign: "center",
+        marginBottom: "4vh",
+        color: "#2D3748",
+        '@media (max-width: 768px)': {
+          fontSize: "5vw",
+          marginBottom: "3vh"
+        }
       }}>
         Customer Reviews
       </h2>
@@ -116,63 +169,95 @@ const ReviewsCarousel = () => {
           1024: { slidesPerView: 3 }
         }}
         style={{
-          padding: "clamp(10px, 2vw, 30px)"
+          padding: "2vh 1vw",
+          '@media (max-width: 768px)': {
+            padding: "1vh 2vw"
+          }
         }}
       >
         {reviews.map((review) => (
-          <SwiperSlide key={review.id}>
-            <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" style={{
-              padding: "clamp(15px, 3vw, 30px)",
-              minHeight: "clamp(200px, 40vh, 300px)",
+          <SwiperSlide key={review.id} className="reviewCarouselSlide">
+            <div style={{
+              backgroundColor: "#FFFFFF",
+              borderRadius: "1vh",
+              padding: "3vh 2vw",
+              minHeight: "40vh",
               display: "flex",
               flexDirection: "column",
-              gap: "clamp(10px, 2vh, 20px)"
+              gap: "2vh",
+              boxShadow: "0 4px 20px rgba(0, 0, 0, 0.05)",
+              '@media (max-width: 768px)': {
+                padding: "4vh 3vw",
+                minHeight: "45vh"
+              }
             }}>
-              <div className="flex items-center" style={{
-                gap: "clamp(10px, 2vw, 20px)"
+              <div style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "2vw"
               }}>
                 <img 
                   src={review.image} 
                   alt={review.name} 
-                  className="rounded-full"
                   style={{
-                    width: "clamp(50px, 10vw, 80px)",
-                    height: "clamp(50px, 10vw, 80px)",
-                    objectFit: "cover"
+                    width: "5vw",
+                    height: "5vw",
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                    '@media (max-width: 768px)': {
+                      width: "12vw",
+                      height: "12vw"
+                    }
                   }}
                 />
                 <div>
-                  <h3 className="font-semibold" style={{
-                    fontSize: "clamp(16px, 2vw, 24px)"
+                  <h3 style={{
+                    fontSize: "1.5vw",
+                    fontWeight: "600",
+                    color: "#2D3748",
+                    '@media (max-width: 768px)': {
+                      fontSize: "4vw"
+                    }
                   }}>
                     {review.name}
                   </h3>
-                  <p className="text-gray-600" style={{
-                    fontSize: "clamp(14px, 1.5vw, 18px)"
+                  <p style={{
+                    fontSize: "1.2vw",
+                    color: "#4A5568",
+                    '@media (max-width: 768px)': {
+                      fontSize: "3vw"
+                    }
                   }}>
                     {review.role}
                   </p>
                 </div>
               </div>
 
-              <div className="flex-grow">
-                <p className="text-gray-700" style={{
-                  fontSize: "clamp(14px, 1.8vw, 20px)",
-                  lineHeight: "1.6"
-                }}>
-                  "{review.review}"
-                </p>
-              </div>
+              <p style={{
+                fontSize: "1.3vw",
+                color: "#4A5568",
+                lineHeight: 1.6,
+                flex: 1,
+                '@media (max-width: 768px)': {
+                  fontSize: "3.2vw"
+                }
+              }}>
+                "{review.review}"
+              </p>
 
-              <div className="flex" style={{
-                gap: "clamp(2px, 0.5vw, 5px)"
+              <div style={{
+                display: "flex",
+                gap: "0.5vw"
               }}>
                 {[...Array(review.rating)].map((_, index) => (
                   <span 
-                    key={index} 
-                    className="text-yellow-400"
+                    key={index}
                     style={{
-                      fontSize: "clamp(16px, 2vw, 24px)"
+                      color: "#F6E05E",
+                      fontSize: "1.8vw",
+                      '@media (max-width: 768px)': {
+                        fontSize: "4vw"
+                      }
                     }}
                   >
                     ★
