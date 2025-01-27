@@ -23,7 +23,6 @@ import DownloadTradehub from '../components/DownloadTradehub.jsx';
 // 53678d
 //bdf
 //e99f9f
-
 const topL = '#1D8189'
 const botR = '#B89D91'
 const innerLight = '#767572'
@@ -38,12 +37,51 @@ const CardDark = '#151114'
 
 const Home = () => {
   return (
-    <div className="flex flex-col w-full h-full bg-black m-0 p-0 overflow-x-hidden">
+    <div style={{
+      display: "flex",
+      flexDirection: "column",
+      width: "100%",
+      backgroundColor: "#f2efef",
+      margin: 0,
+      padding: 0,
+      minHeight: "100vh",
+      overflowX: "hidden"
+    }}>
       {/* Part 1 - Hero Section */}
-      <div className="bg-gradient-to-br from-blue-50 to-blue-200 h-screen py-[2vh] m-0 flex flex-col text-blue-900">
+      <div style={{
+        background: "#f2efef",
+        minHeight: "100vh",
+        padding: "2vh 0",
+        margin: 0,
+        display: "flex",
+        flexDirection: "column"
+      }}>
         <Navbar />
-        <div className="flex w-full flex-row m-[2vh] p-[3vw] ">
-          <div className="w-full flex flex-col gap-[3vh] p-[0_2vw]">
+        <div className='' style={{
+          display: "flex",
+          width: "100%",
+          flexDirection: "row",
+          marginTop: "15vh",
+          padding: "3vw",
+          backdropFilter: "blur(5px)",
+          '@media (max-width: 768px)': {
+            flexDirection: "column",
+            padding: "4vw",
+            margin: "1vh 0"
+          }
+        }}>
+          <div style={{
+            width: "50%",
+            display: "flex",
+            flexDirection: "column",
+            gap: "3vh",
+            padding: "0 2vw",
+            '@media (max-width: 768px)': {
+              width: "100%",
+              padding: "2vw",
+              gap: "2vh"
+            }
+          }}>
             <div className='frontQuote' style={{
               display: "flex",
               flexWrap: "wrap",
@@ -54,7 +92,7 @@ const Home = () => {
               <p>
                 Find a local trusted
               </p>
-              <p className='text-[#4299E1]'>Roofer</p>
+              <span  style={{color: "red"}}>Roofer</span>
             </div>
             <div style={{
               margin: "0 0 0 3vh"
@@ -91,32 +129,82 @@ const Home = () => {
       </div>
 
       {/* Part 2 - How It Works */}
-      <div className="bg-gradient-to-br from-teal-50 to-teal-200 h-screen py-[5vh] px-[3vw] m-0 flex items-center justify-center text-orange-900">
+      <div className='bg-[#88bbd3]' style={{
+        
+        minHeight: "100vh",
+        padding: "5vh 3vw",
+        margin: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }}>
         <HowItWorks />
       </div>
 
       {/* Part 3 - Trades Section */}
-      <div className="bg-gradient-to-br from-green-50 to-green-200 h-screen py-[5vh] px-[3vw] m-0 flex items-center justify-center text-green-900">
+      <div className='bg-[#f2efef]' style={{
+        
+        minHeight: "100vh",
+        padding: "5vh 3vw",
+        margin: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }}>
         <TradesCarousel />
       </div>
 
       {/* Part 4 - Hire Safely */}
-      <div className="bg-gradient-to-br from-purple-50 to-purple-200 h-screen py-[5vh] px-[3vw] m-0 flex items-center justify-center text-purple-900">
+      <div className='bg-[#88bbd3]' style={{
+        
+        minHeight: "100vh",
+        padding: "5vh 3vw",
+        margin: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }}>
         <HireSafely />
       </div>
 
       {/* Part 5 - Reviews and Download */}
-      <div className="bg-gradient-to-br from-sky-50 to-sky-200 h-screen py-[5vh] px-[3vw] m-0 flex flex-col gap-[5vh] text-sky-900">
-        <div className="w-full mb-[5vh] p-[3vh] bg-white/20">
+      <div style={{
+        
+        minHeight: "100vh",
+        padding: "5vh 3vw",
+        margin: 0,
+        display: "flex",
+        flexDirection: "column",
+        gap: "5vh"
+      }}>
+        <div style={{
+          width: "100%",
+          margin: "0 0 5vh 0",
+          padding: "3vh",
+          borderRadius: "2vh"
+        }}>
           <ReviewsCarousel />
         </div>
-        <div className="w-full m-0 p-[3vh] bg-white/20">
+        <div className='bg-[#88bbd3]' style={{
+          width: "100%",
+          margin: 0,
+          padding: "3vh",
+          borderRadius: "2vh"
+        }}>
           <DownloadTradehub />
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-blue-900 to-blue-800 h-[40vh] m-0 py-[4vh] px-[3vw] flex items-center justify-center text-white shadow-[0_-4px_6px_rgba(0,0,0,0.1)]">
+      <footer className='bg-[#88bbd3]' style={{
+        minHeight: "40vh",
+        margin: 0,
+        padding: "4vh 3vw",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)"
+      }}>
         <Footer />
       </footer>
     </div>

@@ -125,12 +125,12 @@ const TradesCarousel = () => {
       x: 0,
       opacity: 1,
       duration: 0.4,
-      stagger: 0.3,
+      stagger: 0.2,
       ease: "power3.out",
       scrollTrigger: {
         trigger: '.tradesCarouselHeadingParent',
         scroller: 'body',
-        start: 'top 60%',
+        start: 'top 80%',
         end: 'top 0%',
         toggleActions: "play none none reverse",
       }
@@ -199,7 +199,7 @@ const TradesCarousel = () => {
             display: "flex",
             justifyContent: "center"
           }}>
-            <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center" style={{
+            <div className="bg-white border-2 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center" style={{
               padding: "clamp(20px, 3vw, 35px)",
               width: "100%",
               maxWidth: "400px",

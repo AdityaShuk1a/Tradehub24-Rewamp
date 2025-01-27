@@ -8,36 +8,52 @@ const CustomButton = ({ buttonName }) => {
     <div 
       onMouseEnter={() => setHover(true)}  
       onMouseLeave={() => setHover(false)} 
-      className='relative rounded-2xl flex justify-center items-center overflow-hidden'
       style={{
-        fontSize: "clamp(14px, 1.8vw, 24px)",
-        gap: "clamp(10px, 2.5vh, 30px)",
+        position: "relative",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        overflow: "hidden",
+        borderRadius: "0.8rem",
+        fontSize: "clamp(12px, 1.6vw, 20px)",
+        gap: "clamp(8px, 2vh, 25px)"
       }}
     > 
-      <div  
-        className={`rounded-2xl border-2 border-purple-300 flex  justify-center items-center relative overflow-hidden bg-black ${hover ? 'text-white' : 'text-white'}`}
-        style={{
-          padding: "clamp(6px, 0.8vh, 9px)",
-          width: "100%",
-          height: "100%"
-        }}
-      > 
-        <span style={{
-          fontSize: "clamp(2vh, 1.2vw, 15px)",
-          // fontSize: "",
-          whiteSpace: "nowrap"
+      <div style={{
+        position: "relative",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        overflow: "hidden",
+        backgroundColor: "black",
+        borderRadius: "0.8rem",
+        border: "2px solid #D8B4FE",
+        width: "100%",
+        height: "100%",
+        padding: "clamp(4px, 0.6vh, 7px)"
+      }}> 
+        <p style={{
+          fontSize: "clamp(1.8vh, 1.1vw, 14px)",
+          color: "white",
+          whiteSpace: "nowrap",
+          margin: 0,
+          padding: 0
         }}>
           {buttonName} 
-        </span>
+        </p>
       </div> 
 
       <motion.div  
         animate={hover ? { y: "-76%", scale: 1.2 } : { y: 0 }} 
         transition={{ ease: easeInOut, delay: 0.01 }} 
-        className='absolute rounded-full mix-blend-difference customButton z-10 bg-purple-300'
         style={{
-          width: "clamp(100px, 25vh, 250px)",
-          height: "clamp(100px, 25vh, 250px)"
+          position: "absolute",
+          width: "clamp(80px, 20vh, 200px)",
+          height: "clamp(80px, 20vh, 200px)",
+          borderRadius: "50%",
+          mixBlendMode: "difference",
+          backgroundColor: "#88bbd3",
+          zIndex: 10
         }}
       /> 
     </div>

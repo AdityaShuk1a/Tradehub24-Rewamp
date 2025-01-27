@@ -60,14 +60,15 @@ function App() {
         width: "2vw",
         height: "2vw"
       }}>
-        <img 
-          src="src/assets/hammer.png" 
+      <img 
+          src="src//assets//icons8-hammer-40.png" 
           alt="cursor" 
           style={{
             width: "100%",
             height: "100%",
             objectFit: "contain",
             userSelect: "none",
+            
             WebkitUserSelect: "none"
           }}
         />

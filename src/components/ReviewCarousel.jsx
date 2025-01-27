@@ -36,7 +36,7 @@ const ReviewsCarousel = () => {
       x: 0,
       opacity: 1,
       duration: 0.4,
-      stagger: 0.5,
+      stagger: 0.2,
       ease: "power2.out"
     }, "-=0.5");
 
@@ -177,7 +177,7 @@ const ReviewsCarousel = () => {
             }}
           >
             {reviews.map((review) => (
-              <SwiperSlide key={review.id} className="reviewCarouselSlide">
+              <SwiperSlide key={review.id} className="reviewCarouselSlide border-2 rounded-2xl">
                 <div style={{
                   backgroundColor: "#FFFFFF",
                   borderRadius: "1vh",

@@ -3,7 +3,7 @@ import CustomButton from './CustomButton'
 
 const StepsCard = ({stepImage, stepHeading, stepButtonText, stepDescription}) => {
   return (
-    <div style={{
+    <div className='border-2 border-black' style={{
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
@@ -71,11 +71,10 @@ const StepsCard = ({stepImage, stepHeading, stepButtonText, stepDescription}) =>
         {stepHeading}
       </h3>
       
-      <p className="text-center flex-grow" style={{
+      <span className="text-center flex-grow" style={{
         fontSize: "1vw",
         lineHeight: "1.4",
         padding: "0 1.5vw",
-        color: "#4A5568",
         '@media (max-width: 768px)': {
           fontSize: "2vw",
           padding: "0 2vw"
@@ -87,7 +86,7 @@ const StepsCard = ({stepImage, stepHeading, stepButtonText, stepDescription}) =>
         }
       }}>
         {stepDescription}
-      </p>
+      </span>
       
       <div style={{ 
         position: "absolute",
