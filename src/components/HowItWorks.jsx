@@ -48,48 +48,52 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div className="howItWorksContainer" style={{
-      width: "95%",
-      display: "flex",
-      flexDirection: "column",
-      border: "0.1vh solid white",
-      borderRadius: "4vh",
-      alignItems: "center",
-      justifyContent: "center",
-      padding: "2vw",
-      gap: "2.5vh",
-      minHeight: "fit-content",
-      marginTop: "1vh",
-      backgroundColor: "rgba(255, 255, 255, 0.1)",
-      backdropFilter: "blur(5px)",
-      opacity: 0,  // Set initial opacity to 0
-      '@media (max-width: 768px)': {
-        width: "90%",
-        padding: "3vw",
-        gap: "2vh",
-        marginTop: "2vh"
-      }
-    }}>
-      <h2 className="howItWorks text-center font-bold" style={{
-        fontSize: "clamp(20px, 3vw, 36px)",
-        marginBottom: "clamp(10px, 2vh, 20px)"
-      }}>
-        How It Works
-      </h2>
-      
-      <div className="flex flex-col md:flex-row md:justify-center md:items-center justify-center items-center w-full" style={{
-        gap: "clamp(15px, 2vw, 25px)",
-        minHeight: "fit-content"
-      }}>
-        {steps.map((step) => (
-          <StepsCard 
-            key={step.id}
-            stepImage={step.image} 
-            stepHeading={step.heading} 
-            stepDescription={step.description} 
-            stepButtonText={step.buttonText} 
-          />
-        ))}
+    <div className="w-full flex flex-col items-center px-4 bg-gradient-to-b from-[#F7F9FC] to-[#EDF2F7]">
+      <div className="backdrop-blur-sm rounded-xl shadow-sm w-full max-w-6xl mx-auto">
+        <div className="howItWorksContainer" style={{
+          width: "95%",
+          display: "flex",
+          flexDirection: "column",
+          border: "0.1vh solid white",
+          borderRadius: "4vh",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "2vw",
+          gap: "2.5vh",
+          minHeight: "fit-content",
+          marginTop: "1vh",
+          backgroundColor: "rgba(255, 255, 255, 0.1)",
+          backdropFilter: "blur(5px)",
+          opacity: 0,  // Set initial opacity to 0
+          '@media (max-width: 768px)': {
+            width: "90%",
+            padding: "3vw",
+            gap: "2vh",
+            marginTop: "2vh"
+          }
+        }}>
+          <h2 className="howItWorks text-center font-bold" style={{
+            fontSize: "clamp(20px, 3vw, 36px)",
+            marginBottom: "clamp(10px, 2vh, 20px)"
+          }}>
+            How It Works
+          </h2>
+          
+          <div className="flex flex-col md:flex-row md:justify-center md:items-center justify-center items-center w-full" style={{
+            gap: "clamp(15px, 2vw, 25px)",
+            minHeight: "fit-content"
+          }}>
+            {steps.map((step) => (
+              <StepsCard 
+                key={step.id}
+                stepImage={step.image} 
+                stepHeading={step.heading} 
+                stepDescription={step.description} 
+                stepButtonText={step.buttonText} 
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

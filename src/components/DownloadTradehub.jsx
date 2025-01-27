@@ -24,29 +24,29 @@ const DownloadTradehub = () => {
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center w-full">
             {/* Google Play Button */}
-            <button className="flex items-center justify-center bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-md shadow-md w-full md:w-auto">
+            <button className="flex items-center justify-center bg-white hover:bg-gray-800 text-white px-4 py-2 rounded-md shadow-md w-full md:w-auto">
               <img
                 className="w-12 h-12 mr-4"
-                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                src="/src/assets/playStore.webp"
                 alt="Google Play"
               />
-              <div>
+              {/* <div>
                 <span className="block text-xs">GET IT ON</span>
                 <span className="block text-sm font-bold">Google Play</span>
-              </div>
+              </div> */}
             </button>
 
             {/* App Store Button */}
-            <button className="flex items-center justify-center bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-md shadow-md w-full md:w-auto">
+            <button className="flex items-center justify-center bg-white hover:bg-gray-800 text-white px-4 py-2 rounded-md shadow-md w-full md:w-auto">
               <img
                 className="w-12 h-12 mr-4"
-                src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                src="/src/assets/appStore.webp"
                 alt="App Store"
               />
-              <div>
+              {/* <div>
                 <span className="block text-xs">Download on the</span>
                 <span className="block text-sm font-bold">App Store</span>
-              </div>
+              </div> */}
             </button>
           </div>
         </div>
