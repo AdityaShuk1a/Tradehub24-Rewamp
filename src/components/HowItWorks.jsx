@@ -6,37 +6,54 @@ const HowItWorks = () => {
     {
       id: 1,
       image: "src//assets//bro.png",
-      heading: "Step 1",
-      description: "Get matched with a trusted professional in minutes.",
-      buttonText: "Learn More",
+      heading: "Search",
+      description: "Find trusted professionals in your area within minutes.",
+      buttonText: "Start Now",
     },
     {
       id: 2,
       image: "https://via.placeholder.com/150",
-      heading: "Step 2",
-      description: "Review their profile and see customer feedback.",
-      buttonText: "See Reviews",
+      heading: "Compare",
+      description: "View profiles, ratings, and customer reviews to make the best choice.",
+      buttonText: "View Pros",
     },
     {
       id: 3,
       image: "https://via.placeholder.com/150",
-      heading: "Step 3",
-      description: "Book an appointment and get the job done.",
+      heading: "Connect",
+      description: "Book your service and get the job done with confidence.",
       buttonText: "Book Now",
     },
   ];
 
   return (
-    <>
-    
-      <h2 className="text-center text-[4vh] font-bold ">How It Works</h2>
-      <div className="flex justify-center items-center space-x-[3vw]">
+    <div className="w-full flex flex-col items-center" style={{
+      padding: "clamp(10px, 2vw, 25px)",
+      gap: "clamp(15px, 2.5vh, 30px)",
+      minHeight: "fit-content"
+    }}>
+      <h2 className="text-center font-bold" style={{
+        fontSize: "clamp(20px, 3vw, 36px)",
+        marginBottom: "clamp(10px, 2vh, 20px)"
+      }}>
+        How It Works
+      </h2>
+      
+      <div className="flex flex-col md:flex-row justify-center items-stretch w-full" style={{
+        gap: "clamp(15px, 2vw, 25px)",
+        minHeight: "fit-content"
+      }}>
         {steps.map((step) => (
-          <StepsCard stepImage={step.image} stepHeading={step.heading} stepDescription={step.description} stepButtonText={step.buttonText} />
+          <StepsCard 
+            key={step.id}
+            stepImage={step.image} 
+            stepHeading={step.heading} 
+            stepDescription={step.description} 
+            stepButtonText={step.buttonText} 
+          />
         ))}
       </div>
-    
-    </>
+    </div>
   );
 };
 

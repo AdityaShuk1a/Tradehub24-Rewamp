@@ -3,40 +3,64 @@ import CustomButton from './CustomButton'
 
 const StepsCard = ({stepImage, stepHeading, stepButtonText, stepDescription}) => {
   return (
-    
-      <div className="rounded-xl bg-white p-4 ring ring-indigo-50 sm:p-6 lg:p-8" style={{marginLeft : "2vh"}}>
-  <div className="flex items-start sm:gap-8">
-    <div
-      className="overflow-hidden sm:grid sm:size-20 sm:shrink-0 sm:place-content-center sm:rounded-full flex items-center justify-center  sm:border-2 sm:border-indigo-500"
-      aria-hidden="true"
-    >
-      <img src={`${stepImage}`}  className=' w-[4vh] h-[6vh] '  alt="" />
-    </div>
-
-    <div>
+    <div className="flex flex-col items-center w-full md:w-1/3 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" style={{
+      padding: "clamp(12px, 1.5vw, 20px)",
+      gap: "clamp(8px, 1.5vh, 15px)",
+      maxWidth: "300px",
+      minHeight: "clamp(200px, 35vh, 280px)",
+      '@media (max-width: 768px)': {
+        minHeight: "180px",
+        padding: "12px",
+        gap: "10px"
+      }
+    }}>
+      <div className="w-full flex justify-center" style={{
+        height: "clamp(80px, 15vh, 120px)",
+        '@media (max-width: 768px)': {
+          height: "80px"
+        }
+      }}>
+        <img 
+          src={stepImage} 
+          alt={stepHeading} 
+          className="rounded-lg h-full"
+          style={{
+            objectFit: "contain",
+            width: "auto"
+          }}
+        />
+      </div>
       
-
-      <h3 className="mt-4 text-lg font-medium sm:text-xl">
-        <a href="#" className="hover:underline">{stepHeading}</a>
+      <h3 className="font-semibold text-center" style={{
+        fontSize: "clamp(16px, 2vw, 24px)",
+        marginTop: "clamp(5px, 1vh, 10px)",
+        '@media (max-width: 768px)': {
+          fontSize: "18px",
+          marginTop: "8px"
+        }
+      }}>
+        {stepHeading}
       </h3>
-
-      <p className="mt-1 text-sm text-gray-700">
+      
+      <p className="text-center text-gray-600 flex-grow" style={{
+        fontSize: "clamp(14px, 1.5vw, 18px)",
+        lineHeight: "1.4",
+        padding: "0 clamp(8px, 1vw, 15px)",
+        '@media (max-width: 768px)': {
+          fontSize: "14px",
+          padding: "0 8px"
+        }
+      }}>
         {stepDescription}
       </p>
-
-      <div className="mt-4 sm:flex sm:items-center sm:gap-2">
-        <div className="flex items-center gap-1 text-gray-500">
-          <CustomButton buttonName={stepButtonText} />
-
-          
-        </div>
-
-       
+      
+      <div style={{ 
+        marginTop: "clamp(5px, 1vh, 10px)",
+        transform: "scale(0.9)"
+      }}>
+        <CustomButton buttonName={stepButtonText} />
       </div>
     </div>
-  </div>
-</div>
-    
   )
 }
 

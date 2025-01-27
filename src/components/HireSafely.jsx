@@ -3,37 +3,101 @@ import CustomButton from './CustomButton';
 
 const HireSafely = () => {
   return (
-    <>
-      <div className='w-[80%] h-[80%] bg-amber-500 relative flex justify-center items-center'>
-        <div className="flex absolute w-[100%] h-[100%] items-center justify-center bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-          
-        <div>
-
-          <img className="object-cover rounded-t-lg h-96" src="src//assets//bro2.png" alt="" />
-          <div className='w-[20vh] h-[1vh] ' style={{marginTop : "4vh"}}  >
-
-          <CustomButton buttonName={"Sign Up As Home Owner  "} />
+    <div className='w-full md:w-[90%] flex justify-center items-center' style={{
+      padding: "clamp(10px, 2vw, 30px)",
+      minHeight: "clamp(250px, 60vh, 600px)",
+      '@media (max-width: 768px)': {
+        padding: "15px",
+        minHeight: "500px"
+      }
+    }}>
+      <div className="flex flex-col md:flex-row w-full h-full items-center justify-center bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+        style={{
+          padding: "clamp(15px, 2vw, 25px)",
+          gap: "clamp(15px, 2.5vw, 30px)",
+          minHeight: "fit-content",
+          '@media (max-width: 768px)': {
+            padding: "15px",
+            gap: "20px"
+          }
+        }}>
+        
+        <div className="flex flex-col items-center w-full md:w-[40%]" style={{
+          gap: "clamp(10px, 2vh, 20px)",
+          '@media (max-width: 768px)': {
+            gap: "15px"
+          }
+        }}>
+          <div className="w-full flex justify-center" style={{
+            height: "clamp(150px, 25vh, 250px)",
+            '@media (max-width: 768px)': {
+              height: "180px"
+            }
+          }}>
+            <img 
+              className="h-full rounded-lg object-contain" 
+              src="src/assets/bro2.png" 
+              alt="Hire Safely" 
+            />
+          </div>
+          <div style={{ transform: "scale(0.9)" }}> {/* Slightly smaller button */}
+            <CustomButton buttonName={"Sign Up As Home Owner"} />
           </div>
         </div>
+        
+        <div className="flex flex-col w-full md:w-[60%] justify-between leading-normal" style={{
+          gap: "clamp(8px, 1.5vh, 20px)",
+          '@media (max-width: 768px)': {
+            gap: "12px"
+          }
+        }}>
+          <h5 className="font-bold tracking-tight text-gray-900 dark:text-white" style={{ 
+            fontSize: "clamp(20px, 2.5vw, 36px)",
+            marginBottom: "clamp(8px, 1.5vh, 20px)",
+            '@media (max-width: 768px)': {
+              fontSize: "22px",
+              marginBottom: "15px"
+            }
+          }}>
+            Hire safely with our homeowner checklist
+          </h5>
           
+          <h4 className='tracking-tight text-gray-900 dark:text-white' style={{ 
+            fontSize: "clamp(16px, 1.8vw, 22px)",
+            '@media (max-width: 768px)': {
+              fontSize: "16px"
+            }
+          }}>
+            ✔️ Follow our top tips for a safe and successful hire:
+          </h4>
           
-          <div className="flex flex-col bg-green-300 w-[70%] justify-between p-4 leading-normal">
-            <h5 className="font-bold tracking-tight text-gray-900 dark:text-white" style={{ fontSize: "4.5vh" }}>Hire safely with our homeowner checklist</h5>
-            <h4 className='mb-2 tracking-tight text-gray-900 dark:text-white' style={{ fontSize: "2.5vh" }}>✔️ Follow our top tips to ensure a safe and successful hire:</h4>
-            <h4 className="mb-3 font-normal text-gray-700 dark:text-gray-400" style={{ fontSize: "2.5vh" }}>✔️ Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</h4>
-            <h4 className="mb-3 font-normal text-gray-700 dark:text-gray-400" style={{ fontSize: "2.5vh" }}>✔️ Convenient job posting & tradespeople selection for clients</h4>
-            <h4 className="mb-3 font-normal text-gray-700 dark:text-gray-400" style={{ fontSize: "2.5vh" }}>✔️ Increased visibility & job opportunities for registered tradespeople</h4>
-            <h4 className="mb-3 font-normal text-gray-700 dark:text-gray-400" style={{ fontSize: "2.5vh" }}>✔️ Streamlined communication between clients and tradespeople</h4>
-            <h4 className="mb-3 font-normal text-gray-700 dark:text-gray-400" style={{ fontSize: "2.5vh" }}>✔️ Secure payment processing & feedback mechanisms</h4>
-            <h4 className="mb-3 font-normal text-gray-700 dark:text-gray-400" style={{ fontSize: "2.5vh" }}>✔️ Ongoing support & platform maintenance</h4>
-            <h4 className="mb-3 font-normal text-gray-700 dark:text-gray-400" style={{ fontSize: "2.5vh" }}>✔️ Get our FREE Homeowner's Checklist today!</h4>
-          </div>
-          
+          {[
+            "Verify credentials and insurance coverage",
+            "Read detailed reviews from previous customers",
+            "Get clear quotes and project timelines",
+            "Use secure payment methods through our platform",
+            "Track project progress in real-time",
+            "Access 24/7 customer support",
+            "Get our FREE Homeowner's Safety Guide"
+          ].map((text, index) => (
+            <h4 
+              key={index}
+              className="font-normal text-gray-700 dark:text-gray-400"
+              style={{ 
+                fontSize: "clamp(14px, 1.6vw, 18px)",
+                lineHeight: "1.4",
+                '@media (max-width: 768px)': {
+                  fontSize: "14px"
+                }
+              }}
+            >
+              ✔️ {text}
+            </h4>
+          ))}
         </div>
         
       </div>
-            
-    </>
+    </div>
   );
 };
 
