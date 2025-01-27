@@ -15,6 +15,9 @@ import TradesCarousel from '../components/TradesCarousel.jsx';
 import ReviewsCarousel from '../components/ReviewCarousel.jsx';
 import HowItWorks from '../components/HowItWorks.jsx';
 import HireSafely from '../components/HireSafely.jsx';
+import DownloadTradehub from '../components/DownloadTradehub.jsx';
+
+
 
 // b3d6fa
 // 53678d
@@ -37,7 +40,8 @@ const Home = () => {
   
   return (
     <>
-      <div className='container-1 h-full bg-[#b3d6fa] flex flex-col z-10 rounded-b-[7vh] rounded-bl-[7vh]'>
+        
+      <div className='container-1   flex flex-col justify-center align-item'>
         <div className='container-2 h-[390vh] bg-[#53678d] flex flex-col rounded-b-[7vh] rounded-bl-[7vh]'>
           <div className='container-3 h-full bg-[#b3d6fa] flex flex-col rounded-b-[7vh] rounded-bl-[7vh]'>
             <div className="container-4 h-[210vh] w-screen bg-[#0f0] flex flex-col  rounded-b-[7vh] rounded-bl-[7vh]">
@@ -96,8 +100,13 @@ const Home = () => {
           <div className="container-10 h-[100vh] w-1/2">
           </div>
         </div>
+        {/* here goes down load trader hub app */}
+          <DownloadTradehub/>
+
+
         <div className="container-11 h-[100vh] w-1/2">
         </div>
+        
       </div>
       <div className="container-9 h-[100vh] rounded-b-[7vh] rounded-bl-[7vh]">
       </div>
