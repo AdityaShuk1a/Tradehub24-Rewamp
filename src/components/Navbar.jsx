@@ -39,18 +39,38 @@ const Navbar = () => {
   // }, []);
 
   return (
-    <div className='w-screen h-[15vh] flex justify-between items-center' style={{ padding: "5vh" }}>
+    <div className='w-full flex flex-col md:flex-row justify-between items-center' style={{ 
+      padding: "clamp(10px, 3vw, 5vh)",
+      minHeight: "clamp(60px, 15vh, 120px)",
+      gap: "clamp(10px, 2vw, 20px)"
+    }}>
       <div className='logo'>
-        <img src="https://tradehub24.com/profile_images/logo.png" className='w-[40vh] h-[7vh]' alt="Logo" />
+        <img 
+          src="https://tradehub24.com/profile_images/logo.png" 
+          alt="Logo" 
+          style={{
+            width: "clamp(150px, 30vw, 40vh)",
+            height: "auto",
+            maxHeight: "7vh"
+          }}
+        />
       </div>
-      <div className='flex gap-[2.5vh] text-2xl'>
-        <div className='nav-item'>How It Works</div>
-        <div className='nav-item'>Join Us</div>
-        <div className='nav-item'>Popular Trades</div>
-        <div className='nav-item'>Reviews</div>
-        <div className='nav-item'>Contact</div>
+      
+      <div style={{
+        fontSize: "clamp(14px, 1.8vw, 24px)",
+        gap: "clamp(10px, 2.5vh, 30px)"
+      }} className='flex flex-wrap justify-center gap-[2.5vh]'>
+        <div className='nav-item cursor-pointer hover:text-blue-500'>How It Works</div>
+        <div className='nav-item cursor-pointer hover:text-blue-500'>Join Us</div>
+        <div className='nav-item cursor-pointer hover:text-blue-500'>Popular Trades</div>
+        <div className='nav-item cursor-pointer hover:text-blue-500'>Reviews</div>
+        <div className='nav-item cursor-pointer hover:text-blue-500'>Contact</div>
       </div>
-      <div className='text-xl flex gap-[2.5vh] button-container'>
+
+      <div style={{
+        fontSize: "clamp(12px, 1.5vw, 20px)",
+        gap: "clamp(8px, 2.5vh, 25px)"
+      }} className='flex gap-[2.5vh] button-container'>
         <CustomButton buttonName={"Login"} />
         <CustomButton buttonName={"Start Free Trial"} />
       </div>

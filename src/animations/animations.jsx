@@ -1,21 +1,20 @@
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger); 
 export const animation = () => {
-  
-    // Initial logo animation
     gsap.fromTo('.logo', {
       y: -50,
       opacity: 0
     }, {
       y: 0,
       opacity: 1,
-      duration: 0.5,
-      delay: 1
+      duration: 0.4,
+      delay: 0.6
     });
 
     // Create timeline for nav items and buttons
     const tl = gsap.timeline({ 
-      delay: 1.5,
+      delay: 0.9,
       onComplete: () => resolve() // Resolve the promise when timeline completes
     });
     
@@ -25,8 +24,8 @@ export const animation = () => {
     }, {
       y: 0,
       opacity: 1,
-      duration: 0.5,
-      stagger: 0.1
+      duration: 0.4,
+      stagger: 0.07
     })
     .fromTo('.button-container button', {
       y: -30,
@@ -34,72 +33,37 @@ export const animation = () => {
     }, {
       y: 0,
       opacity: 1,
-      duration: 0.5,
-      stagger: 0.1
+      duration: 0.3,
+      stagger: 0.07
     });
     tl.fromTo('.frontQuote', {
-      x: -100,
-      opacity: 0,
-      duration : 1,
+      x: -50,
+      opacity: 0
     }, {
       x: 0,
       opacity: 1,
-      duration : 1,
-      stagger : 1,
+      duration: 0.4,
+      stagger: 0.25
     })
-    tl.fromTo('.img1', {
-      x: 100,
-      opacity: 0,
-      duration : 1,
+    .fromTo('.frontQuote h1', {
+      x: -50,
+      opacity: 0
     }, {
       x: 0,
       opacity: 1,
-      duration : 1,
-      stagger : 1,
+      duration: 0.4,
+      stagger: 0.25
     })
+    .fromTo('.heroImg', {
+      x: 50,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1,
+      duration: 0.6
+    });
+    
 
-    tl.fromTo('.howItWorks', {
-      y: -30,
-      opacity: 0,
-      duration : 0.3,
-    }, {
-      y: 0,
-      opacity: 1,
-      duration : 1,
-    })
-    tl.fromTo('.stepCard', {
-      x: 100,
-      opacity: 0,
-      duration : 0.2,
-    }, {
-      x: 0,
-      opacity: 1,
-      duration : 1,
-      stagger : 0.1,
-    })
-    tl.fromTo('.tradeheading', {
-      y: 30,
-      opacity: 0,
-      duration : 0.3,
-      scrollTrigger : {
-        trigger : '.trade',
-        start : 'top 30%',
-        end : 'bottom 0%',
-        markers : true,
-        
-      }
-    }, {
-      y: 0,
-      opacity: 1,
-      duration : 0.3,
-      scrollTrigger : {
-        trigger : '.trade',
-        start : 'top 30%',
-        end : 'bottom 0%',
-        markers : true,
-        
-      }
-    })
   };
   
 

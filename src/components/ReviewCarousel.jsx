@@ -1,85 +1,125 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const ReviewsCarousel = () => {
-  const reviewsData = [
+  const reviews = [
     {
       id: 1,
-      image: 'src//assets//bro.png',
-      name: 'John Doe',
-      review: 'This is an excellent service, highly recommend it!',
+      name: "John Doe",
+      role: "Homeowner",
+      image: "https://via.placeholder.com/150",
+      review: "Excellent service! The platform made it easy to find a reliable tradesperson.",
+      rating: 5
     },
     {
       id: 2,
-      image: 'https://via.placeholder.com/150?text=User+2',
-      name: 'Jane Smith',
-      review: 'Great experience, very professional and reliable.',
+      name: "Jane Smith",
+      role: "Business Owner",
+      image: "https://via.placeholder.com/150",
+      review: "Great experience from start to finish. Highly recommended!",
+      rating: 4
     },
-    {
-      id: 3,
-      image: 'https://via.placeholder.com/150?text=User+3',
-      name: 'Emily Johnson',
-      review: 'I had an amazing experience. They were on time and very efficient.',
-    },
-    {
-      id: 4,
-      image: 'https://via.placeholder.com/150?text=User+4',
-      name: 'Michael Brown',
-      review: 'Fantastic service! I will definitely use them again.',
-    },
-    {
-      id: 5,
-      image: 'https://via.placeholder.com/150?text=User+5',
-      name: 'Sarah Davis',
-      review: 'I am very pleased with the service. They exceeded my expectations.',
-    },
+    // ... add more reviews as needed
   ];
 
   return (
-    <div className="my-[5vh] w-screen h-full">
-      <h2 className="text-center text-[4vh] my-[5vh]" style={{fontWeight : "bold"}}>What Our Customers Are Saying</h2>
-      <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-indicators">
-          {reviewsData.map((_, index) => (
-            <button
-              key={index}
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to={index}
-              className={index === 0 ? "active" : ""}
-              aria-current={index === 0 ? "true" : "false"}
-              aria-label={`Slide ${index + 1}`}
-            ></button>
-          ))}
-        </div>
-        <div className="carousel-inner">
-          {reviewsData.map((review, index) => (
-            <div key={review.id} className={`carousel-item ${index === 0 ? "active" : ""}`}>
-              <div class='w-full h-[70vh]  flex flex-col justify-center items-center text-pink-300' >
-                
-              <img src={review.image} alt={review.name} class="d-block w-[20vh] h-[45vh] object-cover"  />
-              <div class="carousel-caption d-none d-md-block" >
-                <h5>{review.name}</h5>
-                <p>{review.review}</p>
+    <div className="w-full bg-gray-100 rounded-lg" style={{
+      padding: "clamp(20px, 4vw, 60px)"
+    }}>
+      <h2 className="text-center font-bold" style={{
+        fontSize: "clamp(24px, 4vw, 48px)",
+        marginBottom: "clamp(20px, 4vh, 50px)"
+      }}>
+        Customer Reviews
+      </h2>
+
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={30}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          320: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }}
+        style={{
+          padding: "clamp(10px, 2vw, 30px)"
+        }}
+      >
+        {reviews.map((review) => (
+          <SwiperSlide key={review.id}>
+            <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300" style={{
+              padding: "clamp(15px, 3vw, 30px)",
+              minHeight: "clamp(200px, 40vh, 300px)",
+              display: "flex",
+              flexDirection: "column",
+              gap: "clamp(10px, 2vh, 20px)"
+            }}>
+              <div className="flex items-center" style={{
+                gap: "clamp(10px, 2vw, 20px)"
+              }}>
+                <img 
+                  src={review.image} 
+                  alt={review.name} 
+                  className="rounded-full"
+                  style={{
+                    width: "clamp(50px, 10vw, 80px)",
+                    height: "clamp(50px, 10vw, 80px)",
+                    objectFit: "cover"
+                  }}
+                />
+                <div>
+                  <h3 className="font-semibold" style={{
+                    fontSize: "clamp(16px, 2vw, 24px)"
+                  }}>
+                    {review.name}
+                  </h3>
+                  <p className="text-gray-600" style={{
+                    fontSize: "clamp(14px, 1.5vw, 18px)"
+                  }}>
+                    {review.role}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex-grow">
+                <p className="text-gray-700" style={{
+                  fontSize: "clamp(14px, 1.8vw, 20px)",
+                  lineHeight: "1.6"
+                }}>
+                  "{review.review}"
+                </p>
+              </div>
+
+              <div className="flex" style={{
+                gap: "clamp(2px, 0.5vw, 5px)"
+              }}>
+                {[...Array(review.rating)].map((_, index) => (
+                  <span 
+                    key={index} 
+                    className="text-yellow-400"
+                    style={{
+                      fontSize: "clamp(16px, 2vw, 24px)"
+                    }}
+                  >
+                    ★
+                  </span>
+                ))}
               </div>
             </div>
-              </div>
-          ))}
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

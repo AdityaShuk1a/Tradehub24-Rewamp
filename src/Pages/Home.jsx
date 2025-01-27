@@ -15,6 +15,9 @@ import TradesCarousel from '../components/TradesCarousel.jsx';
 import ReviewsCarousel from '../components/ReviewCarousel.jsx';
 import HowItWorks from '../components/HowItWorks.jsx';
 import HireSafely from '../components/HireSafely.jsx';
+import DownloadTradehub from '../components/DownloadTradehub.jsx';
+
+
 
 // b3d6fa
 // 53678d
@@ -34,78 +37,187 @@ const CardDark = '#151114'
 
 
 const Home = () => {
-  
   return (
-    <>
-      <div className='container-1 h-full bg-[#b3d6fa] flex flex-col z-10 rounded-b-[7vh] rounded-bl-[7vh]'>
-        <div className='container-2 h-[390vh] bg-[#53678d] flex flex-col rounded-b-[7vh] rounded-bl-[7vh]'>
-          <div className='container-3 h-full bg-[#b3d6fa] flex flex-col rounded-b-[7vh] rounded-bl-[7vh]'>
-            <div className="container-4 h-[210vh] w-screen bg-[#0f0] flex flex-col  rounded-b-[7vh] rounded-bl-[7vh]">
-              <div className="container-5 h-[110vh] w-screen bg-gradient-to-br from-[#26c6f7] to-[#c1c58d] justify-center rounded-b-[7vh] rounded-bl-[7vh]">
-                <Navbar />
-                <div className='flex w-screen' style={{ marginTop: "7vh", marginLeft : "5vh" }}>
-                  <div className="container-7 h-[50vh]  w-1/2"> 
-                    <div className=' frontQuote  flex flex-wrap w-[57vh] bg-transparent text-[7vh] gap-[1vh]' style={{ padding: "1vh" , marginLeft : "3vh"}}>
-                      <span  style={{marginBottom : "-2vh"}} >Find</span>
-                      <span style={{marginBottom : "-2vh"}} >a</span>
-                      <span style={{marginBottom : "-2vh"}} >local</span>
-                      <span style={{marginBottom : "-2vh"}} >trusted</span>
-                      <span className='text-red-500' style={{marginBottom : "-2vh"}}>Roofer</span>
-                    </div>
-                    <div className='  frontQuote' style={{ marginTop: "2.88vh", padding: "1.44vh", fontSize: "1.92vh" ,  marginLeft : "3vh"}}>
-                      <h1>The idea framework to learn how to</h1>
-                      <h1>manage all aspects of startup</h1>
-                      <div className='rounded-2xl overflow-hidden bg-black w-fit ' style={{marginTop : "5vh"}} >
-
-                      <CustomButton buttonName={"Start For Free"} />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="container-8 h-[50vh]  w-1/2 flex justify-center items-center">
-                    <img className='img1' src={broImg} alt="" style={{ width: "38.46vh" }} />
-                  </div>
-                </div>
-                <div className=' h-[23vh]  bg-[] ' style={{ margin : "8vh" }}>
-                  <div className='flex flex-wrap w-full h-[26.92vh] border rounded-[7vh] items-center justify-evenly'>
-                    <HowItWorks/>
-                  </div>
-                </div>
+    <div style={{ position: "relative", minHeight: "100vh", margin: 0, padding: 0 }}>
+      <div style={{
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        backgroundColor: "#FFFFFF",
+        margin: 0,
+        padding: 0
+      }}>
+        {/* Part 1 - Hero Section */}
+        <div style={{
+          background: "linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)",
+          minHeight: "100vh",
+          padding: "2vh 0",
+          margin: 0,
+          display: "flex",
+          flexDirection: "column",
+          color: "#1A237E"
+        }}>
+          <Navbar />
+          <div style={{
+            display: "flex",
+            width: "100%",
+            flexDirection: "row",
+            margin: "2vh 0",
+            padding: "3vw",
+            backgroundColor: "rgba(255, 255, 255, 0.1)",
+            backdropFilter: "blur(5px)",
+            '@media (max-width: 768px)': {
+              flexDirection: "column",
+              padding: "4vw",
+              margin: "1vh 0"
+            }
+          }}>
+            <div style={{
+              width: "50%",
+              display: "flex",
+              flexDirection: "column",
+              gap: "3vh",
+              padding: "0 2vw",
+              '@media (max-width: 768px)': {
+                width: "100%",
+                padding: "2vw",
+                gap: "2vh"
+              }
+            }}>
+              <div className='frontQuote' style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "1vh",
+                margin: "7vh 0 0 3vh",
+                fontSize: "clamp(24px,4vw,60px)"
+              }}>
+                <span>Find</span>
+                <span>a</span>
+                <span>local</span>
+                <span>trusted</span>
+                <span className='text-[#4299E1]'>Roofer</span>
               </div>
+              <div style={{
+                margin: "0 0 0 3vh"
+              }}>
+                <h1 className='frontQuote' style={{
+                  fontSize: "clamp(14px,1.8vw,24px)"
+                }}>The idea framework to learn how to</h1>
+                <h1 className='frontQuote' style={{
+                  fontSize: "clamp(14px,1.8vw,24px)"
+                }}>manage all aspects of startup</h1>
+                <div style={{
+                  marginTop: "4vh",
+                  marginLeft: "3vh",
+                  borderRadius: "2xl",
+                  overflow: "hidden",
+                  backgroundColor: "#4299E1",
+                  width: "fit-content"
+                }}>
+                  <div className='frontQuote' >
 
-              <div className=".trade my-8 ">
-          
-                <TradesCarousel />
-              </div>
-
-              <div className="container-6 h-[100vh] w-screen flex rounded-b-[7vh] rounded-bl-[7vh] overflow-hidden">
-                <div className="container-7 h-[100vh] w-1/2">
-                </div>
-                <div className="container-8 h-[100vh] w-1/2">
+                  <CustomButton buttonName={"Start For Free"} />
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="container-9 h-[90vh] flex items-center justify-center rounded-b-[7vh] rounded-bl-[7vh]">
-              < HireSafely />
+            <div className="w-full md:w-1/2 flex justify-center items-center">
+              <img className='heroImg w-[clamp(200px,35vw,400px)] h-auto' src={broImg} alt="hero" />
             </div>
-          </div>        
-          <div className='w-screen h-[full] flex justify-center ' style={{padding : "10vh"}} >
+          </div>
+        </div>
 
-          <ReviewsCarousel />
+        {/* Part 2 - How It Works */}
+        <div style={{
+          background: "linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%)",
+          minHeight: "100vh",
+          padding: "5vh 3vw",
+          margin: 0,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#E65100"
+        }}>
+          <HowItWorks />
+        </div>
+
+        {/* Part 3 - Trades Section */}
+        <div style={{
+          background: "linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)",
+          minHeight: "100vh",
+          padding: "5vh 3vw",
+          margin: 0,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#1B5E20"
+        }}>
+          <TradesCarousel />
+        </div>
+
+        {/* Part 4 - Hire Safely */}
+        <div style={{
+          background: "linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%)",
+          minHeight: "100vh",
+          padding: "5vh 3vw",
+          margin: 0,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#4A148C"
+        }}>
+          <HireSafely />
+        </div>
+
+        {/* Part 5 - Reviews and Download */}
+        <div style={{
+          background: "linear-gradient(135deg, #E1F5FE 0%, #B3E5FC 100%)",
+          minHeight: "100vh",
+          padding: "5vh 3vw",
+          margin: 0,
+          display: "flex",
+          flexDirection: "column",
+          gap: "5vh",
+          color: "#01579B"
+        }}>
+          <div style={{
+            width: "100%",
+            margin: "0 0 5vh 0",
+            padding: "3vh",
+            backgroundColor: "rgba(255, 255, 255, 0.2)",
+            borderRadius: "2vh"
+          }}>
+            <ReviewsCarousel />
           </div>
-          
-          <div className="container-10 h-[100vh] w-1/2">
+          <div style={{
+            width: "100%",
+            margin: 0,
+            padding: "3vh",
+            backgroundColor: "rgba(255, 255, 255, 0.2)",
+            borderRadius: "2vh"
+          }}>
+            <DownloadTradehub />
           </div>
         </div>
-        <div className="container-11 h-[100vh] w-1/2">
-        </div>
+
+        {/* Footer */}
+        <footer style={{
+          background: "linear-gradient(to right, #1A237E, #0D47A1)",
+          minHeight: "40vh",
+          margin: 0,
+          padding: "4vh 3vw",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#FFFFFF",
+          boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)"
+        }}>
+          <Footer />
+        </footer>
       </div>
-      <div className="container-9 h-[100vh] rounded-b-[7vh] rounded-bl-[7vh]">
-      </div>
-      <div className="container-9 h-[100vh] rounded-b-[7vh] rounded-bl-[7vh] z-[-1] fixed bottom-0 bg-[#1E2939]"  >
-        <Footer />
-      </div>
-    </>
+    </div>
   );
 };
 
 export default Home;
+

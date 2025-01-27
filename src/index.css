@@ -16,3 +16,16 @@ html, body{
   overflow-x: hidden;
   
 }
+
+/* Add these base responsive styles to your index.css */
+@layer base {
+  html {
+    font-size: 16px;
+    @screen sm {
+      font-size: 14px;
+    }
+    @screen lg {
+      font-size: 16px;
+    }
+  }
+}
