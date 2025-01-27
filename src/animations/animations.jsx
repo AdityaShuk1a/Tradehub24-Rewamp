@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 
-export const navbarAnimation = () => {
-  return new Promise((resolve) => {
+export const animation = () => {
+  
     // Initial logo animation
     gsap.fromTo('.logo', {
       y: -50,
@@ -37,15 +37,6 @@ export const navbarAnimation = () => {
       duration: 0.5,
       stagger: 0.1
     });
-  });
-};
-
-export const homeAnimation = () => {
-  return new Promise((resolve) => {
-    const tl = gsap.timeline({
-      onComplete: () => resolve()
-    });
-
     tl.fromTo('.frontQuote', {
       x: -100,
       opacity: 0,
@@ -56,8 +47,9 @@ export const homeAnimation = () => {
       duration : 1,
       stagger : 1,
     })
-    
-  });
-};
 
-// Add more animation functions as needed 
+    
+    
+  };
+  
+
