@@ -98,7 +98,7 @@ const HireSafely = () => {
                   flex: "none"
                 }
               }}>
-                <div style={{
+                <div className='hover:scale-115 transition-transform duration-300' style={{
                   width: "100%",
                   height: "35vh",
                   '@media (max-width: 768px)': {

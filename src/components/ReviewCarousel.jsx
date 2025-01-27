@@ -130,9 +130,9 @@ const ReviewsCarousel = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-[#EDF2F7] to-[#F7FAFC]">
-      <div className=" rounded-xl shadow-sm">
-        <div className="reviewCarouselContainer" style={{
+    <div className="bg-gradient-to-b from-[#EDF2F7] to-[#F7FAFC] ">
+      <div className=" rounded-xl shadow-sm ">
+        <div className="reviewCarouselContainer " style={{
           width: "100%",
           padding: "4vh 3vw",
           backgroundColor: "#F7F9FC",
@@ -141,7 +141,7 @@ const ReviewsCarousel = () => {
             padding: "3vh 4vw"
           }
         }}>
-          <h2 className="reviewCarouselHeading" style={{
+          <h2 className="reviewCarouselHeading " style={{
             fontSize: "3vw",
             fontWeight: "bold",
             textAlign: "center",
