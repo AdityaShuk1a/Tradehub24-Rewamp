@@ -13,10 +13,16 @@ import DownloadTradehub from '../components/DownloadTradehub.jsx';
 const Home = () => {
   return (
     <>
-        <Navbar />
+    
     <div className="flex flex-col w-full bg-[#f2efef] min-h-screen overflow-x-hidden">
+      <div className='fixed top-0 left-0 right-0 z-[999]' >
+
+        <Navbar />
+      </div>
       {/* Part 1 - Hero Section */}
-      <div className="bg-[#f2efef] h-[80vh] py-[32px] flex justify-center flex-col items-center">
+      <div className="bg-[#f2efef] h-[80vh] py-[32px] flex justify-center flex-col items-center" style={{
+        marginTop : "10vh"
+      }}>
         <div className="border-2 rounded-4xl border-black flex w-11/12 mt-[144px] backdrop-blur-md flex-col sm:flex-col md:flex-row">
           <div className="flex flex-col gap-12 w-full py-3 px-3 justify-center">
             <div className="frontQuote flex flex-wrap gap-4 mt-[80px] text-[clamp(24px,4vw,60px)] justify-center">
@@ -31,7 +37,7 @@ const Home = () => {
             </div>
           </div>
           <div className="hover:scale-115 transition-transform duration-300 w-full md:w-1/2 flex justify-center items-center">
-            <img className="heroImg w-[clamp(200px,35vw,400px)] h-auto" src={broImg} alt="hero" />
+            <img className="heroImg h-auto w-[clamp(200px,35vw,400px)]" src={broImg} alt="hero" />
           </div>
         </div>
       </div>

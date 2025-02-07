@@ -5,7 +5,7 @@ import CustomButton from './CustomButton';
 const Navbar = () => {
   
   return (
-    <div className='w-full navbar bg-[#45455d4e] flex flex-col items-center justify-center gap-2.5 fixed top-0 left-0 right-0 z-1000 py-3 px-3 backdrop-blur-lg bg-[rgba(69,69,93,0.3)]
+    <div className='w-full navbar bg-[#45455d4e] absolute flex flex-col items-center justify-center gap-2.5 top-0 left-0 right-0 z-[999] py-3 px-3 backdrop-blur-lg 
     md:flex-row md:justify-between md:items-center
     '>
       
