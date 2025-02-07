@@ -138,23 +138,15 @@ const TradesCarousel = () => {
 
     
   }, []);
-
   return (
-    <div className=" tradesCarouselHeadingParent w-full flex flex-col items-center" style={{
-      padding: "clamp(15px, 3vw, 50px)",
+    <div className="tradesCarouselHeadingParent w-full flex flex-col items-center px-4 py-8 md:px-6 md:py-10" style={{
       minHeight: "clamp(400px, 70vh, 800px)",
       '@media (max-width: 768px)': {
-        padding: "15px",
         minHeight: "500px"
       }
     }}>
-      <h2 className="tradesCarouselHeading text-center font-bold w-full" style={{
-        fontSize: "clamp(24px, 4vw, 48px)",
-        marginBottom: "clamp(20px, 4vh, 60px)",
-        '@media (max-width: 768px)': {
-          fontSize: "28px",
-          marginBottom: "30px"
-        }
+      <h2 className="tradesCarouselHeading text-center font-bold w-full text-[clamp(24px,4vw,48px)] mb-[clamp(20px,4vh,60px)] md:text-[28px] " style={{
+        marginBottom : "3vh"
       }}>
         Popular Trades
       </h2>
@@ -182,90 +174,31 @@ const TradesCarousel = () => {
             spaceBetween: 25
           }
         }}
-        style={{
-          padding: "clamp(10px, 2vw, 30px)",
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          '@media (max-width: 768px)': {
-            padding: "15px 10px"
-          }
-        }}
+        className="p-[clamp(10px,2vw,30px)] w-full flex justify-center md:p-[15px_10px]"
       >
         {tradesData.map((trade) => (
-          <div className="tradesCarousel" >
-
-          <SwiperSlide className="tradesCarousel" key={trade.id} style={{
-            display: "flex",
-            justifyContent: "center"
-          }}>
-            <div className="bg-white border-2 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center" style={{
-              padding: "clamp(20px, 3vw, 35px)",
-              width: "100%",
-              maxWidth: "400px",
-              minHeight: "clamp(300px, 45vh, 400px)",
-              gap: "clamp(15px, 2.5vh, 25px)",
-              '@media (max-width: 768px)': {
-                padding: "20px",
-                minHeight: "280px",
-                gap: "15px"
-              }
-            }}>
-              <div className="w-full flex justify-center" style={{
-                height: "clamp(120px, 20vh, 180px)",
-                marginBottom: "clamp(10px, 2vh, 20px)",
-                '@media (max-width: 768px)': {
-                  height: "120px",
-                  marginBottom: "15px"
-                }
-              }}>
-                <div style={{
-                  width: "clamp(120px, 25vw, 200px)",
-                  height: "100%",
-                  position: "relative",
-                  '@media (max-width: 768px)': {
-                    width: "120px"
-                  }
-                }}>
-                  <img 
-                    src={trade.image} 
-                    alt={trade.title} 
-                    className="rounded-lg"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "contain",
-                      objectPosition: "center"
-                    }}
-                  />
+          <div className="tradesCarousel" key={trade.id}>
+            <SwiperSlide className="flex justify-center">
+              <div className="bg-white border-2 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center p-[clamp(20px,3vw,35px)] w-full max-w-[400px] min-h-[clamp(300px,45vh,400px)] gap-[clamp(15px,2.5vh,25px)] md:p-[20px] md:min-h-[280px] md:gap-[15px]">
+                <div className="w-full flex justify-center h-[clamp(120px,20vh,180px)] mb-[clamp(10px,2vh,20px)] md:h-[120px] md:mb-[15px]">
+                  <div className="w-[clamp(120px,25vw,200px)] h-full relative md:w-[120px]">
+                    <img 
+                      src={trade.image} 
+                      alt={trade.title} 
+                      className="rounded-lg w-full h-full object-contain object-center"
+                    />
+                  </div>
                 </div>
+
+                <h3 className="font-semibold text-center text-[clamp(20px,2.5vw,28px)] mb-[clamp(10px,2vh,20px)] md:text-[20px] md:mb-[10px]">
+                  {trade.title}
+                </h3>
+
+                <p className="text-gray-700 text-center flex-grow flex items-center justify-center text-[clamp(16px,1.8vw,20px)] leading-[1.6] px-[clamp(10px,2vw,20px)] md:text-[16px] md:leading-[1.5] md:px-[10px]">
+                  {trade.description}
+                </p>
               </div>
-
-              <h3 className="font-semibold text-center" style={{
-                fontSize: "clamp(20px, 2.5vw, 28px)",
-                marginBottom: "clamp(10px, 2vh, 20px)",
-                '@media (max-width: 768px)': {
-                  fontSize: "20px",
-                  marginBottom: "10px"
-                }
-              }}>
-                {trade.title}
-              </h3>
-
-              <p className="text-gray-700 text-center flex-grow flex items-center justify-center" style={{
-                fontSize: "clamp(16px, 1.8vw, 20px)",
-                lineHeight: "1.6",
-                padding: "0 clamp(10px, 2vw, 20px)",
-                '@media (max-width: 768px)': {
-                  fontSize: "16px",
-                  lineHeight: "1.5",
-                  padding: "0 10px"
-                }
-              }}>
-                {trade.description}
-              </p>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
           </div>
         ))}
       </Swiper>

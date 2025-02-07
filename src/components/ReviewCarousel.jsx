@@ -128,30 +128,11 @@ const ReviewsCarousel = () => {
       rating: 5
     }
   ];
-
   return (
-    <div className="bg-gradient-to-b from-[#EDF2F7] to-[#F7FAFC] ">
-      <div className=" rounded-xl shadow-sm ">
-        <div className="reviewCarouselContainer " style={{
-          width: "100%",
-          padding: "4vh 3vw",
-          backgroundColor: "#F7F9FC",
-          borderRadius: "2vh",
-          '@media (max-width: 768px)': {
-            padding: "3vh 4vw"
-          }
-        }}>
-          <h2 className="reviewCarouselHeading " style={{
-            fontSize: "3vw",
-            fontWeight: "bold",
-            textAlign: "center",
-            marginBottom: "4vh",
-            color: "#2D3748",
-            '@media (max-width: 768px)': {
-              fontSize: "5vw",
-              marginBottom: "3vh"
-            }
-          }}>
+    <div className="bg-gradient-to-b from-[#EDF2F7]  to-[#F7FAFC] ">
+      <div className="rounded-xl shadow-sm">
+        <div className="reviewCarouselContainer w-full p-4 md:p-3 bg-[#F7F9FC] rounded-[2vh]">
+          <h2 className="reviewCarouselHeading text-center font-bold mb-4 text-[#2D3748] text-[3vw] md:text-[5vw]">
             Customer Reviews
           </h2>
 
@@ -169,102 +150,44 @@ const ReviewsCarousel = () => {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 }
             }}
-            style={{
-              padding: "2vh 1vw",
-              '@media (max-width: 768px)': {
-                padding: "1vh 2vw"
-              }
-            }}
+            className="p-2 md:p-1"
           >
             {reviews.map((review) => (
-              <SwiperSlide key={review.id} className="reviewCarouselSlide border-2 rounded-2xl">
-                <div style={{
-                  backgroundColor: "#FFFFFF",
-                  borderRadius: "1vh",
-                  padding: "3vh 2vw",
-                  minHeight: "40vh",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "2vh",
-                  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.05)",
-                  '@media (max-width: 768px)': {
-                    padding: "4vh 3vw",
-                    minHeight: "45vh"
-                  }
-                }}>
-                  <div style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "2vw"
-                  }}>
+              <SwiperSlide key={review.id} className="reviewCarouselSlide border-3 rounded-xl">
+                <div className="bg-white rounded-[1vh] p-3 md:p-4 min-h-[40vh] flex flex-col justify-center gap-2 shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
+                  <div className="flex items-center justify-center gap-2">
                     <img 
                       src={review.image} 
                       alt={review.name} 
-                      style={{
-                        width: "5vw",
-                        height: "5vw",
-                        borderRadius: "50%",
-                        objectFit: "cover",
-                        '@media (max-width: 768px)': {
-                          width: "12vw",
-                          height: "12vw"
-                        }
-                      }}
+                      className="h-36 rounded-full object-cover  md:h-[12vw]"
                     />
                     <div>
-                      <h3 style={{
-                        fontSize: "1.5vw",
-                        fontWeight: "600",
-                        color: "#2D3748",
-                        '@media (max-width: 768px)': {
-                          fontSize: "4vw"
-                        }
-                      }}>
+                      <h3 className="text-[#2D3748] font-semibold text-2xl md:text-[4vw]">
                         {review.name}
                       </h3>
-                      <p style={{
-                        fontSize: "1.2vw",
-                        color: "#4A5568",
-                        '@media (max-width: 768px)': {
-                          fontSize: "3vw"
-                        }
-                      }}>
-                        {review.role}
-                      </p>
+                      
                     </div>
                   </div>
+                  <div className='flex flex-col justify-center items-center text-center' >
 
-                  <p style={{
-                    fontSize: "1.3vw",
-                    color: "#4A5568",
-                    lineHeight: 1.6,
-                    flex: 1,
-                    '@media (max-width: 768px)': {
-                      fontSize: "3.2vw"
-                    }
-                  }}>
+                  <p className="text-[#4A5568] text-xl md:text-3xl">
+                        {review.role}
+                      </p>
+                  <p className="text-[#4A5568] text-lg  flex-ccl md:text-xl">
                     "{review.review}"
                   </p>
-
-                  <div style={{
-                    display: "flex",
-                    gap: "0.5vw"
-                  }}>
+                  <div className="flex gap-1">
                     {[...Array(review.rating)].map((_, index) => (
                       <span 
                         key={index}
-                        style={{
-                          color: "#F6E05E",
-                          fontSize: "1.8vw",
-                          '@media (max-width: 768px)': {
-                            fontSize: "4vw"
-                          }
-                        }}
+                        className="text-[#F6E05E] text-2xl md:text-3xl"
                       >
                         ★
                       </span>
                     ))}
                   </div>
+                  </div>
+
                 </div>
               </SwiperSlide>
             ))}

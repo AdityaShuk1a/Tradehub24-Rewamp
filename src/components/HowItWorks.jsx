@@ -79,7 +79,7 @@ const HowItWorks = () => {
             How It Works
           </h2>
           
-          <div className="flex flex-col md:flex-row md:justify-center md:items-center justify-center items-center w-full" style={{
+          <div className="flex flex-col md:flex-row md:justify-center md:items-center justify-center items-center w-full md:w-fit" style={{
             gap: "clamp(15px, 2vw, 25px)",
             minHeight: "fit-content"
           }}>
